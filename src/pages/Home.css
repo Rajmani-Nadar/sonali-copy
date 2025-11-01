@@ -278,7 +278,7 @@ h1 span::selection { background: transparent; color: inherit; }
 }
 
 .about-left h2 {
-  font-size: 2.2rem;
+  font-size: 0.8rem;
   font-weight: 700;
   margin-bottom: 8px;
   color: grey;
@@ -391,5 +391,532 @@ h1 span::selection { background: transparent; color: inherit; }
 
   .about-right {
     text-align: left;
+  }
+}
+
+/* =============================
+   Our Applications Section
+============================= */
+.applications-section {
+  background-color: #0e2439;
+  color: #fff;
+  padding: 80px 70px;
+  text-align: left;
+}
+
+.app-subtitle {
+  font-size: 1rem;
+  color: grey;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.applications-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.applications-section h2 span {
+  background: linear-gradient(276.27deg, #FFFFFF 19.15%, rgba(255, 255, 255, 0.3) 91.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for non-webkit browsers */
+  font-weight: 800;
+}
+
+
+.applications-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0; /* no spacing between cards */
+  border-radius: 20px;
+  overflow: hidden; /* makes the corners smooth when joined */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* single outer border */
+  background: #0e2439;; /* faint shared background */
+}
+
+.app-card {
+  flex: 1;
+  min-width: 280px;
+  padding: 40px 30px;
+  /* background: rgba(255, 255, 255, 0.08); */
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+/* Remove right border for the last card */
+.app-card:last-child {
+  border-right: none;
+}
+
+.app-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+.app-card .icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.app-card p {
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.app-card h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .applications-grid {
+    flex-direction: column;
+    border: none;
+  }
+
+  .app-card {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .app-card:last-child {
+    border-bottom: none;
+  }
+}
+
+/* =============================
+   Featured Products Section
+============================= */
+.featured-products {
+  color: #162C47;
+  text-align: center;
+  padding: 80px 70px;
+  position: relative;
+}
+
+.featured-subtitle {
+  font-size: 1rem;
+  color: grey;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.featured-products h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.featured-products h2 span {
+  background: linear-gradient(276.27deg, #162C47 19.15%, rgba(22, 44, 71, 0.5) 91.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 4.5rem;
+}
+
+/* Product Cards Grid */
+.product-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Base Card */
+.product-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 250px;               /* smaller width */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Image */
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Title */
+.product-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #fff;
+}
+
+/* Tilt Effects */
+.product-card.rotate-left {
+  transform: rotate(-30deg);
+  margin-top: 100px;
+  background: linear-gradient(135deg, #2D8E96 50%, #56AEB3 100%);
+}
+
+.product-card.rotate-right {
+  transform: rotate(30deg);
+  margin-top: 100px;
+  background: linear-gradient(180deg, #3768a5 0%, #464C72 100%);
+}
+
+.product-card.no-rotate {
+  transform: rotate(0deg);
+  background: linear-gradient(180deg, #464C72 0%, #2B2F4A 100%);
+}
+
+/* Hover reset tilt */
+/* .product-card:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+} */
+
+/* Explore Button */
+.product-btn {
+  background-color: lightgray;
+  color: #162C47;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 0px;
+}
+
+.product-btn:hover {
+  background-color: #003f82;
+  color: white;
+}
+
+.product-card .first-image {
+  transform: rotate(30deg);
+}
+
+.product-card .third-image {
+  transform: rotate(-30deg);
+}
+
+/* =============================
+   News & Updates Section
+============================= */
+.news-updates {
+  color: #000;
+  padding: 100px 80px;
+  border-radius: 0;
+}
+
+/* Header layout for title + button */
+.news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+/* Subtitle & Heading */
+.news-subtitle {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: gray;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.news-updates h2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin: 0;
+  text-align: left;
+  line-height: 1.1;
+  color: #162C47;
+}
+
+.news-updates h2 span {
+  background: linear-gradient(276.27deg, #162c47 19.15%, rgba(22, 44, 71, 0.5) 91.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* "See More" Button aligned right */
+.see-more-btn {
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: flex-end;
+}
+
+.see-more-btn:hover {
+  background-color: #c62828;
+}
+
+/* News grid layout */
+.news-grid {
+  display: flex;
+  justify-content: center; /* ✅ Centers both cards equally */
+  align-items: stretch;
+  gap: 40px; /* Slightly smaller gap for balance */
+  flex-wrap: wrap;
+}
+
+/* Equal and responsive card widths */
+.news-card {
+  background: #ffffff;
+  color: #162c47;
+  border-radius: 25px;
+  padding: 40px;
+  width: 480px; /* ✅ Wider card fills space evenly */
+  max-width: 100%;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* News content styles */
+.news-date {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.news-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.news-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Read More link */
+.news-link {
+  color: #0056b3;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.news-link:hover {
+  color: #003f82;
+}
+/* News images */
+.news-img {
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Different image widths per card */
+.first-img {
+  width: 100%;
+}
+
+.second-img {
+  width: 100%;
+  height: 250px;
+}
+
+/* Hover zoom effect */
+.news-card:hover .news-img {
+  transform: scale(1.05);
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .news-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .see-more-btn {
+    margin-top: 20px;
+    align-self: flex-start;
+  }
+
+  .news-grid {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-updates {
+    padding: 60px 25px;
+  }
+
+  .news-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-card {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+/* =============================
+   Certifications & Trust Section
+============================= */
+.certifications-section {
+  text-align: center;
+  padding: 70px 70px;
+  border-radius: 0;
+  color: #162C47;
+}
+
+.cert-subtitle {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: gray;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.certifications-section h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.certifications-section h2 span {
+  background: linear-gradient(276.27deg, #162C47 19.15%, rgba(22, 44, 71, 0.5) 91.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4.5rem;
+  font-weight: 800;
+}
+
+.cert-desc {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Logo row */
+.cert-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.cert-logos img {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1) contrast(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Layout for left and right content */
+.cert-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 0px 100px;
+}
+
+.cert-left {
+  flex: 1;
+  text-align: left;
+}
+
+.cert-right {
+  flex: 1;
+  text-align: right;
+}
+
+/* Keep existing text styling */
+.cert-subtitle {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: gray;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.cert-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+  .cert-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cert-left,
+  .cert-right {
+    flex: unset;
+    text-align: center;
+  }
+
+  .certifications-section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: 60px 25px;
+  }
+
+  .cert-logos {
+    gap: 25px;
+  }
+
+  .cert-logos img {
+    height: 70px;
+  }
+
+  .certifications-section h2 {
+    font-size: 2rem;
+  }
+
+  .cert-desc {
+    font-size: 1rem;
   }
 }
