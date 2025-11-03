@@ -41,30 +41,35 @@ const Home = () => {
         </div>
 
         {/* WhatsApp Floating Chat */}
-        <div className="whatsapp-container">
+        <div className="position-fixed bottom-0 end-0 mb-4 me-4" style={{ zIndex: 1000 }}>
           {showChat && (
-            <div className="chat-popup">
-              <button className="close-btn" onClick={() => setShowChat(false)}>
-                ×
-              </button>
-              <h4>Welcome to our website!</h4>
-              <p>
-                Nice to meet you! If you have any questions about our products,
-                feel free to contact us.
-              </p>
-              <button className="chat-btn">Chat with us →</button>
+            <div className="card shadow-lg mb-3" style={{ width: '300px' }}>
+              <div className="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                <h5 className="mb-0">Welcome to our website!</h5>
+                <button 
+                  className="btn-close btn-close-white" 
+                  onClick={() => setShowChat(false)}
+                  aria-label="Close chat"
+                />
+              </div>
+              <div className="card-body">
+                <p className="card-text">
+                  Nice to meet you! If you have any questions about our products,
+                  feel free to contact us.
+                </p>
+                <button className="btn btn-success w-100">
+                  Chat with us <i className="fas fa-arrow-right ms-2"></i>
+                </button>
+              </div>
             </div>
           )}
 
           <button
-            className="whatsapp-icon"
+            className="btn btn-success rounded-circle p-3 shadow-lg"
             onClick={() => setShowChat(true)}
             aria-label="Chat with us on WhatsApp"
           >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-              alt="WhatsApp"
-            />
+            <i className="fab fa-whatsapp fa-2x"></i>
           </button>
         </div>
       </div>
@@ -75,13 +80,13 @@ const Home = () => {
           <h2>About Us</h2>
           <h3>
             Welcome to <br />
-            <span class="highlight-text">Sonali Wires LLP</span>
+            <span className="highlight-text">Sonali Wires LLP</span>
           </h3>
 
           <div className="who-we-are">
             <h3>WHO <br />WE ARE</h3>
-            <a href="#about" class="know-more-btn">
-              Know More <span class="arrow">→</span>
+            <a href="#about" className="know-more-btn">
+              Know More <span className="arrow">→</span>
             </a>
 
           </div>
@@ -159,7 +164,6 @@ const Home = () => {
             <h3>Submersing Wires (FR, FRLS, HFFR)</h3>
           </div>
 
-
           <div className="product-card no-rotate">
             <img src={threeCore} alt="Three Core Flat Cables" className="second-image" />
             <h3>Three Core Flat Cables</h3>
@@ -169,8 +173,9 @@ const Home = () => {
             <img src={redBlueYellow} alt="Wiring Wires (FR, FRLS, HFFR)" className="third-image" />
             <h3>Submersible Winding Wires</h3>
           </div>
+        </div>
+        <div style={{ textAlign: 'center', marginTop: '40px' }}>
           <button className="product-btn">Explore Our Products →</button>
-
         </div>
       </div>
 
@@ -249,87 +254,94 @@ const Home = () => {
         </div>
       </div>
 
-      <footer className="footer">
-  {/* Top section */}
-  <div className="footer-top">
-    <div className="footer-left">
-      <h2>
-        Power Your Future with <br />
-        <span>Sonali Wires</span>
-      </h2>
-
-      <div className="footer-content-right">
-        <p>
-          Get safe, durable, and certified copper wires & cables for your home,
-          industry, or farm.
-        </p>
-
-        <div className="footer-buttons">
-          <button className="footer-btn red">Contact Us →</button>
-          <button className="footer-btn blue">Find a Dealer →</button>
+      <footer className="bg-dark text-light py-5">
+        {/* Top section */}
+        <div className="container mb-5">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <h2 className="display-4 mb-4">
+                Power Your Future with <br />
+                <span className="fw-bold">Sonali Wires</span>
+              </h2>
+            </div>
+            <div className="col-lg-6">
+              <p className="lead mb-4">
+                Get safe, durable, and certified copper wires & cables for your home,
+                industry, or farm.
+              </p>
+              <div className="d-flex gap-3">
+                <button className="btn btn-danger btn-lg">Contact Us →</button>
+                <button className="btn btn-info btn-lg text-white">Find a Dealer →</button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  {/* Middle links section */}
-  <div className="footer-links">
-    <div className="footer-logo">
-      <img src="/images/sonali-logo.png" alt="Sonali Wires Logo" />
-      <p>
-        Safe, reliable, and innovative copper wiring solutions powering homes,
-        industries & agriculture.
-      </p>
-      <div className="social-icons">
-        <a href="#"><i className="fab fa-whatsapp"></i></a>
-        <a href="#"><i className="fab fa-youtube"></i></a>
-        <a href="#"><i className="fab fa-facebook"></i></a>
-        <a href="#"><i className="fab fa-linkedin"></i></a>
-      </div>
-    </div>
+        {/* Middle links section */}
+        <div className="container py-4">
+          <div className="row g-4">
+            <div className="col-lg-4 mb-4">
+              <img src="/images/sonali-logo.png" alt="Sonali Wires Logo" className="mb-3" />
+              <p className="mb-4">
+                Safe, reliable, and innovative copper wiring solutions powering homes,
+                industries & agriculture.
+              </p>
+              <div className="d-flex gap-3 fs-4">
+                <a href="https://wa.me/yourwhatsappnumber" className="text-light"><i className="fab fa-whatsapp"></i></a>
+                <a href="https://youtube.com/yourchannel" className="text-light"><i className="fab fa-youtube"></i></a>
+                <a href="https://facebook.com/yourpage" className="text-light"><i className="fab fa-facebook"></i></a>
+                <a href="https://linkedin.com/company/yourcompany" className="text-light"><i className="fab fa-linkedin"></i></a>
+              </div>
+            </div>
 
-    <div>
-      <h4>Quick Links :</h4>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#careers">Careers</a></li>
-      </ul>
-    </div>
+            <div className="col-lg-2 col-md-6">
+              <h4 className="h5 mb-3">Quick Links</h4>
+              <ul className="nav flex-column">
+                <li className="nav-item"><a href="#home" className="nav-link text-light px-0">Home</a></li>
+                <li className="nav-item"><a href="#about" className="nav-link text-light px-0">About Us</a></li>
+                <li className="nav-item"><a href="#resources" className="nav-link text-light px-0">Resources</a></li>
+                <li className="nav-item"><a href="#careers" className="nav-link text-light px-0">Careers</a></li>
+              </ul>
+            </div>
 
-    <div>
-      <h4>Our Products :</h4>
-      <ul>
-        <li><a href="#housing">Housing Wires</a></li>
-        <li><a href="#submersible">Submersible Winding</a></li>
-        <li><a href="#flat">Three Core Flat Cables</a></li>
-        <li><a href="#industrial">Industrial Copper Cables</a></li>
-      </ul>
-    </div>
+            <div className="col-lg-3 col-md-6">
+              <h4 className="h5 mb-3">Our Products</h4>
+              <ul className="nav flex-column">
+                <li className="nav-item"><a href="#housing" className="nav-link text-light px-0">Housing Wires</a></li>
+                <li className="nav-item"><a href="#submersible" className="nav-link text-light px-0">Submersible Winding</a></li>
+                <li className="nav-item"><a href="#flat" className="nav-link text-light px-0">Three Core Flat Cables</a></li>
+                <li className="nav-item"><a href="#industrial" className="nav-link text-light px-0">Industrial Copper Cables</a></li>
+              </ul>
+            </div>
 
-    <div>
-      <h4>Contact Us :</h4>
-      <ul className="contact-info">
-        <li>📞 +91 83444 22211</li>
-        <li>✉️ info@sonaligroup.com</li>
-        <li>
-          📍 Sonali Group, G-6/30, Jain Plaza,<br />
-          Oppanakara Street, Coimbatore,<br />
-          Tamil Nadu - 641001, (India).
-        </li>
-      </ul>
-    </div>
-  </div>
+            <div className="col-lg-3">
+              <h4 className="h5 mb-3">Contact Us</h4>
+              <ul className="list-unstyled">
+                <li className="mb-2"><i className="fas fa-phone me-2"></i>+91 83444 22211</li>
+                <li className="mb-2"><i className="fas fa-envelope me-2"></i>info@sonaligroup.com</li>
+                <li>
+                  <i className="fas fa-map-marker-alt me-2"></i>
+                  Sonali Group, G-6/30, Jain Plaza,<br />
+                  Oppanakara Street, Coimbatore,<br />
+                  Tamil Nadu - 641001, (India).
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-  {/* Footer bottom */}
-  <div className="footer-bottom">
-    <p>
-      © 2024 Sonali Wires LLP. All rights reserved.&nbsp;
-      <a href="#privacy">Privacy Policy</a>
-    </p>
-  </div>
-</footer>
+        {/* Footer bottom */}
+        <div className="container-fluid border-top border-secondary mt-4">
+          <div className="container">
+            <div className="row py-3">
+              <div className="col text-center">
+                © 2024 Sonali Wires LLP. All rights reserved.
+                <a href="#privacy" className="text-light ms-2">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
 
     </>

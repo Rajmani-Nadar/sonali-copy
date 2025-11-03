@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -15,64 +15,103 @@ function App() {
 
   return (
     <Router>
-      <nav className="navbar">
-        <div className="navbar-logo">
-          <NavLink to="/">
-            <img src={logo} alt="Sonali Wires Logo" />
+      <nav className="navbar navbar-expand-lg bg-primary navbar-dark py-3">
+        <div className="container">
+          <NavLink to="/" className="navbar-brand d-flex align-items-center gap-2">
+            <img src={logo} alt="Sonali Wires Logo" height="50" />
+            <p className="mb-0 fw-bold lh-sm">
+              Sonali <br />Wires
+            </p>
           </NavLink>
-          <p>Sonali <br />Wires</p>
+
+          <button 
+            className="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarContent">
+            <ul className="navbar-nav ms-auto align-items-center gap-3">
+              <li className="nav-item">
+                <NavLink to="/" end className={({isActive}) => 
+                  `nav-link ${isActive ? 'active text-warning' : ''}`
+                }>
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/about" className={({isActive}) => 
+                  `nav-link ${isActive ? 'active text-warning' : ''}`
+                }>
+                  About Us
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/products" className={({isActive}) => 
+                  `nav-link ${isActive ? 'active text-warning' : ''}`
+                }>
+                  Our Products
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/innovation" className={({isActive}) => 
+                  `nav-link ${isActive ? 'active text-warning' : ''}`
+                }>
+                  Innovation & Quality
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/careers" className={({isActive}) => 
+                  `nav-link ${isActive ? 'active text-warning' : ''}`
+                }>
+                  Careers
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/media" className={({isActive}) => 
+                  `nav-link ${isActive ? 'active text-warning' : ''}`
+                }>
+                  Media & Resources
+                </NavLink>
+              </li>
+
+              {/* Search */}
+              <li className="nav-item position-relative">
+                {showSearch ? (
+                  <input
+                    type="text"
+                    className="form-control form-control-sm"
+                    placeholder="Search..."
+                    autoFocus
+                    onBlur={() => setShowSearch(false)}
+                  />
+                ) : (
+                  <button
+                    className="btn btn-link nav-link"
+                    onClick={() => setShowSearch(true)}
+                  >
+                    <i className="fas fa-search"></i>
+                  </button>
+                )}
+              </li>
+
+              {/* Contact Us Button */}
+              <li className="nav-item">
+                <NavLink to="/contact" className="nav-link">
+                  <button className="btn btn-danger rounded-pill px-4">
+                    Contact Us
+                  </button>
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <ul className="navbar-links">
-          <li>
-            <NavLink to="/" end>
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">About Us</NavLink>
-          </li>
-          <li>
-            <NavLink to="/products">Our Products</NavLink>
-          </li>
-          <li>
-            <NavLink to="/innovation">Innovation & Quality</NavLink>
-          </li>
-          <li>
-            <NavLink to="/careers">Careers</NavLink>
-          </li>
-          <li>
-            <NavLink to="/media">Media & Resources</NavLink>
-          </li>
-
-
-          {/* 🔍 Search Icon & Input */}
-          <li className="search-item">
-            {showSearch ? (
-              <input
-                type="text"
-                className="search-input"
-                placeholder="Search..."
-                autoFocus
-                onBlur={() => setShowSearch(false)} // hide when user clicks away
-              />
-            ) : (
-              <button
-                className="search-icon"
-                onClick={() => setShowSearch(true)}
-              >
-                🔍
-              </button>
-            )}
-          </li>
-
-          {/* 🟡 Contact Us Button */}
-          <li>
-            <NavLink to="/contact">
-              <button className="contact-btn">Contact Us</button>
-            </NavLink>
-          </li>
-        </ul>
       </nav>
 
       <div className="content">
