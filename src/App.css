@@ -1,98 +1,44 @@
-.navbar {
-  background-color: #003057;
-  padding: 10px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+/* Custom styles that Bootstrap doesn't provide */
+
+/* Override Bootstrap's default primary color to match the brand */
+.bg-primary {
+  background-color: #003057 !important;
 }
 
-.navbar-logo {
-  display: flex;          
-  align-items: center;        
-  gap: 10px;                   
-  color: white;
+/* Custom hover effect for nav links */
+.navbar .nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.navbar-logo img {
-  height: 50px;
-  width: auto;
-  cursor: pointer;
+.navbar .nav-link:hover {
+  color: #f7d708 !important;
 }
 
-.navbar-logo p {
-  margin: 0;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.1;
-}
-
-.navbar-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-  margin-left: 100px;
-}
-
-.navbar-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.navbar-links li a:hover {
-  color: #f7d708;
-}
-
-/* 🔍 Search */
-.search-item {
-  position: relative;
-}
-
-.search-icon {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-  transition: transform 0.2s;
-  margin-left: 50px;
-}
-
-.search-icon:hover {
-  transform: scale(1.2);
-}
-
-.search-input {
-  border: none;
-  outline: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 14px;
+/* Search transition effect */
+.form-control-sm {
   width: 140px;
   transition: width 0.3s ease;
 }
 
-/* 🟡 Contact Button */
-.contact-btn {
-  background-color: #e53935;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 25px;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.form-control-sm:focus {
+  width: 200px;
 }
 
-.contact-btn:hover {
-  background-color: #c62828;
+/* Custom styles for navbar brand */
+.navbar-brand img {
+  width: auto;
+  height: 50px;
 }
 
-.navbar-links li a.active {
-  color: #f7d708; /* yellow highlight color */
-  padding-bottom: 4px;
+.navbar-brand p {
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+/* Custom spacing for navbar items on larger screens */
+@media (min-width: 992px) {
+  .navbar .nav-item {
+    margin-left: 0.5rem;
+  }
 }
