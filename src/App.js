@@ -8,7 +8,7 @@ import Careers from "./pages/Careers";
 import Media from "./pages/Media";
 import Contact from "./pages/Contact";
 import "./App.css";
-import logo from "./images/logo.jpeg";
+import logo from "./images/sonali_logo.png";
 
 function App() {
   const [showSearch, setShowSearch] = useState(false);
@@ -19,9 +19,6 @@ function App() {
         <div className="container">
           <NavLink to="/" className="navbar-brand d-flex align-items-center gap-2">
             <img src={logo} alt="Sonali Wires Logo" height="50" />
-            <p className="mb-0 fw-bold lh-sm">
-              Sonali <br />Wires
-            </p>
           </NavLink>
 
           <button 

@@ -28,7 +28,7 @@
   background-repeat: no-repeat;
   background-position: right center;
   background-size: contain;
-  background-color: #003057;
+  background-color: #05345A;
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -58,6 +58,13 @@
   }
 }
 
+.overlay h1 {
+  font-size: 64px; /* responsive: min 3rem, scales up to 5rem */
+  font-weight: 420;
+  margin-bottom: 10px;
+  line-height: 1;
+  /* font-family: "Sequel Sans", sans-serif; */
+}
 .overlay p {
   font-size: 20px;
   margin-top: 2px;
@@ -73,13 +80,14 @@
   letter-spacing: 1px;
 }
 
-h1 span {
+.over {
   display: block;
   /* Wires size: responsive and large */
-  font-size: 250px;  
-  font-weight: 800;
+  font-size: clamp(80px, 15vw, 250px);  
+  font-weight: 700;
   margin-top: -20px; 
-  line-height: 0.9;  
+  line-height: 0.9;
+  width: auto;  
 
   /* Hard split: left blue gradient, right pure white (50% split) */
   background: linear-gradient(
@@ -148,7 +156,7 @@ h1 span::selection { background: transparent; color: inherit; }
   }
 
   .btn {
-    width: 100%;
+    width: auto;
     justify-content: center;
   }
 }
@@ -713,7 +721,7 @@ h1 span::selection { background: transparent; color: inherit; }
   color: #162c47;
   border-radius: 25px;
   padding: 40px;
-  width: 480px; /* ✅ Wider card fills space evenly */
+  width: 580px; /* ✅ Wider card fills space evenly */
   max-width: 100%;
   text-align: left;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
