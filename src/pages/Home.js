@@ -13,6 +13,7 @@ import iso9001 from "../images/iso-9001.jpg";
 import iso14001 from "../images/iso-14001.avif";
 import iso45001 from "../images/iso-45001.webp";
 import pureCopper from "../images/pure-copper.png";
+import { FaWhatsapp, FaYoutube, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 const Home = () => {
   const [showChat, setShowChat] = useState(false);
@@ -248,6 +249,98 @@ const Home = () => {
           <img src={pureCopper} alt="Pure Copper" />
         </div>
       </div>
+
+      <footer className="footer">
+  {/* Top section */}
+  <div className="footer-top">
+    <div className="footer-left">
+      <h2>
+        Power Your Future with <br />
+        <span>Sonali Wires</span>
+      </h2>
+
+      <div className="footer-content-right">
+        <p>
+          Get safe, durable, and certified copper wires & cables for your home,
+          industry, or farm.
+        </p>
+
+        <div className="footer-buttons">
+          <button className="footer-btn red">Contact Us →</button>
+          <button className="footer-btn blue">Find a Dealer →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Middle links section */}
+  <div className="footer-links">
+    <div className="footer-logo">
+      <img src="/images/sonali logo 1.jpeg" alt="Sonali Wires Logo" />
+      <p>
+        Safe, reliable, and innovative copper wiring solutions powering homes,
+        industries & agriculture.
+      </p>
+      <div className="social-icons">
+  <a href="https://wa.me/918344422211" target="_blank" rel="noopener noreferrer">
+    <FaWhatsapp />
+  </a>
+  <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+    <FaYoutube />
+  </a>
+  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+    <FaFacebook />
+  </a>
+  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+    <FaLinkedin />
+  </a>
+</div>
+
+    </div>
+
+    <div>
+      <h4>Quick Links :</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#careers">Careers</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Our Products :</h4>
+      <ul>
+        <li><a href="#housing">Housing Wires</a></li>
+        <li><a href="#submersible">Submersible Winding</a></li>
+        <li><a href="#flat">Three Core Flat Cables</a></li>
+        <li><a href="#industrial">Industrial Copper Cables</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contact Us :</h4>
+      <ul className="contact-info">
+        <li>📞 +91 83444 22211</li>
+        <li>✉️ info@sonaligroup.com</li>
+        <li>
+          📍 Sonali Group, G-6/30, Jain Plaza,<br />
+          Oppanakara Street, Coimbatore,<br />
+          Tamil Nadu - 641001, (India).
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  {/* Footer bottom */}
+  <div className="footer-bottom">
+    <p>
+      © 2024 Sonali Wires LLP. All rights reserved.&nbsp;
+      <a href="#privacy">Privacy Policy</a>
+    </p>
+  </div>
+</footer>
+
 
     </>
   );
