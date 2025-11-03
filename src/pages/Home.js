@@ -13,6 +13,7 @@ import iso9001 from "../images/iso-9001.jpg";
 import iso14001 from "../images/iso-14001.avif";
 import iso45001 from "../images/iso-45001.webp";
 import pureCopper from "../images/pure-copper.png";
+import sonali_logo from "../images/sonali_logo.png";
 
 const Home = () => {
   const [showChat, setShowChat] = useState(false);
@@ -22,8 +23,9 @@ const Home = () => {
       <div className="home-container">
         <div className="overlay">
           <h1>
-            Sonali <br /> <span>wires.</span>
+            Sonali <span className="over">wires.</span>
           </h1>
+           
           <h3>Stronger trust.</h3>
           <p>
             Safe, reliable, and innovative copper wiring solutions powering homes,
@@ -254,6 +256,7 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Footer Section */}
       <footer className="bg-dark text-light py-5">
         {/* Top section */}
         <div className="container mb-5">
@@ -281,7 +284,7 @@ const Home = () => {
         <div className="container py-4">
           <div className="row g-4">
             <div className="col-lg-4 mb-4">
-              <img src="/images/sonali-logo.png" alt="Sonali Wires Logo" className="mb-3" />
+              <img src={sonali_logo} alt="Sonali Wires Logo" className="mb-3" />
               <p className="mb-4">
                 Safe, reliable, and innovative copper wiring solutions powering homes,
                 industries & agriculture.

@@ -2,7 +2,7 @@
 
 /* Override Bootstrap's default primary color to match the brand */
 .bg-primary {
-  background-color: #003057 !important;
+  background-color: #05345A !important;
 }
 
 /* Custom hover effect for nav links */
@@ -28,7 +28,7 @@
 /* Custom styles for navbar brand */
 .navbar-brand img {
   width: auto;
-  height: 50px;
+  height: 60px;
 }
 
 .navbar-brand p {
