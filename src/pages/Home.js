@@ -14,6 +14,8 @@ import iso14001 from "../images/iso-14001.avif";
 import iso45001 from "../images/iso-45001.webp";
 import pureCopper from "../images/pure-copper.png";
 import sonali_logo from "../images/sonali_logo.png";
+import Hyperspeed from "../components/Hyperspeed";
+import { hyperspeedPresets } from "../components/hyperspeedPresets";
 
 const Home = () => {
   const [showChat, setShowChat] = useState(false);
@@ -21,6 +23,8 @@ const Home = () => {
   return (
     <>
       <div className="home-container">
+        <Hyperspeed effectOptions={hyperspeedPresets.one} />
+
         <div className="overlay">
           <h1>
             Sonali <span className="over">wires.</span>
