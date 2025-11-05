@@ -319,7 +319,7 @@ h1 span::selection { background: transparent; color: inherit; }
   padding: 100px 70px;
   background-color: #f5f7fa;
   color: #162C47;
-  gap: 60px;
+  gap: 10px;
 }
 
 .about-left {
@@ -388,7 +388,7 @@ h1 span::selection { background: transparent; color: inherit; }
 .know-more-btn {
   color: #fff;
   border: none;
-  padding: 12px 28px;
+  padding: 50px 14px;
   border-radius: 25px;
   cursor: pointer;
   font-size: 16px;
@@ -443,6 +443,35 @@ h1 span::selection { background: transparent; color: inherit; }
   }
 }
 
+@media (max-width: 768px) {
+  .who-we-are {
+    max-width: 150px !important;
+    height: 150px !important;
+    padding-left: 10px !important;
+    padding-top: 8px;
+    margin-top: 20px;
+    border-radius: 15px;
+    margin-bottom: -40px;
+  }
+
+  .who-we-are h3 {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    padding: 6px 15px;
+  }
+
+  .who-we-are .know-more-btn {
+    font-size: 0.85rem;
+    padding: 6px 15px;
+    margin-top: 35px;
+  }
+
+  .who-we-are .arrow {
+    font-size: 1rem;
+  }
+}
+
+
 /* =============================
    Our Applications Section
 ============================= */
@@ -468,7 +497,6 @@ h1 span::selection { background: transparent; color: inherit; }
 }
 
 .applications-section h2 span {
-  background: linear-gradient(276.27deg, #FFFFFF 19.15%, rgba(255, 255, 255, 0.3) 91.75%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; /* for non-webkit browsers */
@@ -525,20 +553,34 @@ h1 span::selection { background: transparent; color: inherit; }
   font-weight: 700;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
+  .applications-section {
+    padding: 60px 25px;
+  }
   .applications-grid {
     flex-direction: column;
     border: none;
+    width: 100%;          /* Full container width */
+    max-width: 400px;     /* Limit max width for better focus */
+    margin: 0 auto;       /* Center horizontally */
+    padding: 0;      /* Add side padding */
+    box-sizing: border-box;
+    border-radius: 30px; /* maintain rounded corners */
+
   }
 
   .app-card {
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    min-width: 100%;      /* Full width of container */
+    padding: 10px 0px;   /* Reduced padding for mobile */
   }
 
   .app-card:last-child {
     border-bottom: none;
+  }
+  .applications-grid .icon p h3 {
+    margin-left: 20px;
   }
 }
 
@@ -552,12 +594,12 @@ h1 span::selection { background: transparent; color: inherit; }
   position: relative;
 }
 
-.featured-subtitle {
-  font-size: 1rem;
-  color: grey;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
+.featured-products h2 span {
+  background: linear-gradient(276.27deg, #162C47 19.15%, rgba(22, 44, 71, 0.5) 91.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 4.5rem;
 }
 
 .featured-products h2 {
@@ -566,13 +608,20 @@ h1 span::selection { background: transparent; color: inherit; }
   margin-bottom: 50px;
 }
 
-.featured-products h2 span {
-  background: linear-gradient(276.27deg, #162C47 19.15%, rgba(22, 44, 71, 0.5) 91.75%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: 4.5rem;
+.featured-subtitle {
+  font-size: 1rem;
+  color: grey;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
+
+/* Responsive padding reduction */
+@media (max-width: 768px) {
+  .featured-products {
+    padding: 60px 20px;
+  }
+}
+
 
 /* Product Cards Grid */
 .product-grid {
@@ -583,15 +632,37 @@ h1 span::selection { background: transparent; color: inherit; }
   flex-wrap: wrap;
 }
 
+/* Stack cards vertically on small screens */
+@media (max-width: 768px) {
+  .product-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
 /* Base Card */
 .product-card {
   background: white;
   border-radius: 20px;
   padding: 25px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  width: 250px;               /* smaller width */
+  width: 250px; /* desktop width */
+  height: 330px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Full width on small screens */
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+    max-width: 350px; /* optional max width for phones */
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    transform: none !important; /* Remove rotate effects on mobile */
+  }
 }
 
 /* Card Image */
@@ -609,30 +680,34 @@ h1 span::selection { background: transparent; color: inherit; }
   color: #fff;
 }
 
+/* On small screens reduce font size */
+@media (max-width: 768px) {
+  .product-card h3 {
+    font-size: 1.25rem;
+  }
+}
+
 /* Tilt Effects */
 .product-card.rotate-left {
-  transform: rotate(-30deg);
-  margin-top: 100px;
   background: linear-gradient(135deg, #2D8E96 50%, #56AEB3 100%);
 }
 
 .product-card.rotate-right {
-  transform: rotate(30deg);
-  margin-top: 100px;
   background: linear-gradient(180deg, #3768a5 0%, #464C72 100%);
 }
 
 .product-card.no-rotate {
-  transform: rotate(0deg);
   background: linear-gradient(180deg, #464C72 0%, #2B2F4A 100%);
 }
 
-/* Hover reset tilt */
-/* .product-card:hover {
-  transform: rotate(0deg) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-} */
+/* Remove tilt effects on small screens */
+@media (max-width: 768px) {
+  .product-card.rotate-left,
+  .product-card.rotate-right {
+    transform: none !important;
+    margin-top: 0 !important;
+  }
+}
 
 /* Explore Button */
 .product-btn {
@@ -652,12 +727,22 @@ h1 span::selection { background: transparent; color: inherit; }
   color: white;
 }
 
-.product-card .first-image {
-  transform: rotate(30deg);
+/* Remove rotation on images for mobile */
+@media (max-width: 768px) {
+  .product-card .first-image,
+  .product-card .third-image {
+    transform: none !important;
+  }
 }
 
-.product-card .third-image {
-  transform: rotate(-30deg);
+@media (max-width: 768px) {
+  .featured-products h2 {
+    font-size: 2rem; /* smaller size for mobile */
+  }
+  
+  .featured-products h2 span {
+    font-size: 3rem; /* scale down the span text size as well */
+  }
 }
 
 /* =============================
@@ -725,7 +810,7 @@ h1 span::selection { background: transparent; color: inherit; }
   display: flex;
   justify-content: center; /* ✅ Centers both cards equally */
   align-items: stretch;
-  gap: 40px; /* Slightly smaller gap for balance */
+  gap: 20px; /* Slightly smaller gap for balance */
   flex-wrap: wrap;
 }
 
@@ -844,20 +929,22 @@ h1 span::selection { background: transparent; color: inherit; }
   padding: 70px 70px;
   border-radius: 0;
   color: #162C47;
+  background-color: #f9f9f9; /* Optional: Add a background color for contrast */
 }
 
 .cert-subtitle {
   font-size: 1.1rem;
-  text-transform: uppercase;
   color: gray;
   margin-bottom: 10px;
   letter-spacing: 1px;
+  text-align: center; /* Ensure center alignment */
 }
 
 .certifications-section h2 {
   font-size: 2.8rem;
   font-weight: 600;
   margin-bottom: 20px;
+  text-align: center; /* Center heading text */
 }
 
 .certifications-section h2 span {
@@ -866,6 +953,7 @@ h1 span::selection { background: transparent; color: inherit; }
   -webkit-text-fill-color: transparent;
   font-size: 4.5rem;
   font-weight: 800;
+  display: inline-block; /* Ensure it behaves well in text flow */
 }
 
 .cert-desc {
@@ -874,15 +962,17 @@ h1 span::selection { background: transparent; color: inherit; }
   margin: 0 auto 60px;
   line-height: 1.6;
   color: #333;
+  text-align: center; /* Center paragraph text */
 }
 
 /* Logo row */
 .cert-logos {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center logos horizontally */
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
+  margin-top: 30px; /* Optional: add vertical spacing */
 }
 
 .cert-logos img {
@@ -896,41 +986,38 @@ h1 span::selection { background: transparent; color: inherit; }
 /* Layout for left and right content */
 .cert-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center the content container */
   align-items: center;
   gap: 60px;
   flex-wrap: wrap;
-  padding: 0px 100px;
+  padding: 0 20px; /* Reduced padding for mobile */
+}
+
+.cert-left, .cert-right {
+  flex: 1 1 300px; /* Flex grow, shrink, basis for responsiveness */
+  max-width: 500px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .cert-left {
-  flex: 1;
   text-align: left;
 }
 
 .cert-right {
-  flex: 1;
   text-align: right;
 }
 
-/* Keep existing text styling */
-.cert-subtitle {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  color: gray;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-}
-
-.cert-desc {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333;
-  margin: 0;
-}
-
-/* Responsive: stack on mobile */
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
+  .certifications-section {
+    padding: 40px 25px;
+  }
+
+  .cert-subtitle {
+    font-size: 1rem;
+    text-align: left;
+  }
   .cert-content {
     flex-direction: column;
     text-align: center;
@@ -939,34 +1026,27 @@ h1 span::selection { background: transparent; color: inherit; }
   .cert-left,
   .cert-right {
     flex: unset;
+    max-width: 100%;
     text-align: center;
   }
 
   .certifications-section h2 {
-    font-size: 2rem;
-  }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .certifications-section {
-    padding: 60px 25px;
+    font-size: 1.6rem;
+    text-align: left;
   }
 
+  .cert-desc {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  /* Adjust logo size and gap for mobile screens */
   .cert-logos {
     gap: 25px;
   }
 
   .cert-logos img {
     height: 70px;
-  }
-
-  .certifications-section h2 {
-    font-size: 2rem;
-  }
-
-  .cert-desc {
-    font-size: 1rem;
   }
 }
 
@@ -1145,5 +1225,17 @@ h1 span::selection { background: transparent; color: inherit; }
   .footer-links {
     flex-direction: column;
     gap: 40px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .btn-lg {
+    padding: 6px 15px !important; /* Reduced vertical and horizontal padding */
+    font-size: 1rem !important;  /* Optional: reduce font size for better fit */
+  }
+
+  /* Optional: reduce gap between buttons on mobile */
+  .d-flex.gap-3 {
+    gap: 10px !important;
   }
 }
