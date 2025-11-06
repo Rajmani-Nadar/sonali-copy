@@ -311,7 +311,7 @@ h1 span::selection { background: transparent; color: inherit; }
 /* =============================
    About Section
 ============================= */
-.about-container {
+.about-container1 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -427,7 +427,7 @@ h1 span::selection { background: transparent; color: inherit; }
 
 /* Responsive Design */
 @media (max-width: 900px) {
-  .about-container {
+  .about-container1 {
     flex-direction: column;
     gap: 40px;
     padding: 60px 30px;

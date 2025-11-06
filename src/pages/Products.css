@@ -1,0 +1,154 @@
+/* ===== Hero Section ===== */
+.products-hero {
+  background: radial-gradient(
+      71.94% 231.36% at 22.22% 79.39%,
+      #2b494f 0%,
+      #0c1a2b 100%
+    ),
+    url("../images/wire1.png") no-repeat right top;
+  background-size: cover;
+  color: #ffffff;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-heading {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-heading span {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+/* Scroll-down circle */
+.scroll-down-circle {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: #ffffff;
+  text-align: center;
+  transform: rotate(-20deg);
+  opacity: 0.8;
+}
+
+/* ===== Product Grid Section ===== */
+.product-grid-section {
+  background: #ffffff;
+  color: #0e255a;
+}
+
+.product-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0e255a;
+  line-height: 1.3;
+}
+
+.product-heading span {
+  color: #2b5bb3;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.product-subtext {
+  color: #6b6b6b;
+  font-size: 1rem;
+  max-width: 700px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* ===== Product Cards ===== */
+.product-card {
+  border-radius: 12px;
+  padding: 20px;
+  color: #0e255a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-card h5 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Hover effect */
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Backgrounds for each card */
+.card-bg1 {
+  background: linear-gradient(135deg, #f3f7fb, #e9eef4);
+}
+
+.card-bg2 {
+  background: linear-gradient(135deg, #f8f9ff, #eef2f8);
+}
+
+.card-bg3 {
+  background: linear-gradient(135deg, #f4faff, #eaf3fc);
+}
+
+.card-bg4 {
+  background: linear-gradient(135deg, #f7f9ff, #e8eef7);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .hero-heading {
+    font-size: 48px;
+  }
+
+  .scroll-down-circle {
+    width: 90px;
+    height: 90px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .product-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-heading {
+    font-size: 38px;
+  }
+
+  .product-heading span {
+    font-size: 2rem;
+  }
+}

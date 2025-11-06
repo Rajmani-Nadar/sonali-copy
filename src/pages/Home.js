@@ -73,7 +73,7 @@ const Home = () => {
       </div>
 
       {/* About Us Section - Moved outside home-container */}
-      <div className="about-container">
+      <div className="about-container1">
         <div className="about-left">
           <h2>About Us</h2>
           <h3>

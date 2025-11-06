@@ -2,6 +2,7 @@ import React from "react";
 import "./About.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { FaShieldAlt, FaCogs, FaLightbulb, FaLeaf, FaHeart } from "react-icons/fa";
+import { FaTrophy } from "react-icons/fa";
 
 import dressImage from "../images/dress_code.png";
 import imgRamesh from "../images/successful-businessman-Photoroom 1.png";
@@ -9,9 +10,11 @@ import imgKarthik from "../images/jobs-career-campaign-Photoroom 1.png";
 import imgPrakash from "../images/confident-businessman-Photoroom 1.png";
 import imgAnitha from "../images/business-woman-Photoroom 1.png";
 import historyImg from "../images/loom-Photoroom 1.png";
+import manufactureImg from "../images/manufacture.png";
+import mapImg from "../images/map-india.png";
 
 const About = () => {
-  return (  
+  return (
     <>
       {/* ========= Top Blue Section ========= */}
       <div className="about-container">
@@ -21,8 +24,9 @@ const About = () => {
             <div className="col-lg-6">
               <p className="breadcrumb">Home &gt; About Us</p>
               <h2 className="about-title">About</h2>
+              <span className="span-h1">Sonali </span>
               <h1 className="about-heading">
-                <span>Sonali </span>Wires LLP
+                Wires LLP
               </h1>
 
               <h3 className="vision-title">Our Vision</h3>
@@ -57,11 +61,9 @@ const About = () => {
             <div className="col-lg-8">
               <p className="small-title text-muted">Our Mission</p>
               <h2 className="mission-text">
-                To exceed customer expectations by delivering world-class copper
-                wires and cables backed by quality certifications & innovation.
+                To exceed customer expectations by delivering world-class copper <span className="mission-text-span"> wires and cables backed by quality certifications & innovation.</span>
               </h2>
-
-              <div className="mt-4">
+              <div className="mt-5">
                 <h3 className="highlight-number">1M+</h3>
                 <p className="highlight-caption">
                   Households & Industries Served
@@ -71,9 +73,12 @@ const About = () => {
 
             <div className="col-lg-4 text-lg-end mt-4 mt-lg-0">
               <div className="exp-box">
+                <div className="exp-icon">
+                  <FaTrophy />
+                </div>
                 <h3 className="exp-number">25+</h3>
                 <p className="exp-caption">
-                  Years of Excellence in copper wire manufacturing
+                  Years of Excellence <span>in copper wire manufacturing</span>
                 </p>
               </div>
             </div>
@@ -85,10 +90,36 @@ const About = () => {
               <p className="small-title text-muted">Company Profile</p>
               <h2 className="profile-heading">
                 A Trusted Name in <br />
-                <span>Quality Copper Wire Manufacturing</span>
+                <span>Quality <br /> Copper Wire Manufacturing</span>
               </h2>
-            </div>
+              <div className="team-circle">
+      <svg viewBox="0 0 200 200" className="circle-svg">
+        <defs>
+          <path
+            id="circlePath"
+            d="M100,100
+               m-80,0
+               a80,80 0 1,1 160,0
+               a80,80 0 1,1 -160,0"
+          />
+        </defs>
+        <text
+          fontSize="28"
+          fill="#11224d"
+          fontWeight="500"
+          letterSpacing="2px"
+        >
+          <textPath href="#circlePath" startOffset="0%">
+            • Meet Our Team • Meet Our Team
+          </textPath>
+        </text>
+      </svg>
 
+      <div className="center-circle">
+        <span className="arrow">↓</span>
+      </div>
+    </div>
+            </div>
             <div className="col-lg-6">
               <p className="profile-desc">
                 Sonali Wires LLP is a leading manufacturer of high-quality copper
@@ -129,7 +160,7 @@ const About = () => {
             <div className="col-lg-8">
               <i className="bi bi-quote"></i>
               <h3 className="leader-quote-title">
-                Guided by <span>Values.</span> Driven by <span>Quality.</span>
+                Guided by Values. Driven by Quality.
               </h3>
               <p className="leader-quote-text">
                 Our journey began with a commitment to deliver safe, durable, and
@@ -141,181 +172,187 @@ const About = () => {
               </p>
 
               <div className="leader-name-block">
-                <h5 className="leader-name">Mr. R. Mahesh Kumar</h5> <br/>
-                <p className="leader-title">
-                  Chairman, <span>Sonali Wires LLP</span>
-                </p>
-                <a
+                <h5 className="leader-name">Mr. R. Mahesh Kumar <a
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="linkedin-icon"
                 >
                   <i className="bi bi-linkedin"></i>
-                </a>
+                </a></h5>
+                <p className="leader-title">
+                  Chairman, <span>Sonali Wires LLP</span>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-            {/* ========= Leadership Team Section ========= */}
       <div className="team-section">
-        <div className="container">
-  <div className="row">
-    <div className="col-lg-12">
-      <p className="small-title text-muted">Our Leadership Team</p>
-      <h2 className="team-heading">
-  The People Empowering <br />
-  <span>Our Growth & Excellence</span>
-</h2>
+  <div className="container">
+    <div className="row">
+      <div className="col-lg-12">
+        <p className="small-title text-muted">Our Leadership Team</p>
+        <h2 className="team-heading">
+          The People Empowering <br />
+          <span>Our Growth & Excellence</span>
+        </h2>
+        <p className="team-subtext">
+          Behind our success is a dedicated leadership team that brings
+          expertise, vision, and a strong commitment to quality and
+          customer satisfaction.
+        </p>
+      </div>
+    </div>
 
-      <p className="team-subtext">
-        Behind our success is a dedicated leadership team that brings
-        expertise, vision, and a strong commitment to quality and customer
-        satisfaction.
-      </p>
+    {/* ===== Responsive Carousel Cards ===== */}
+    <div className="team-cards-wrapper">
+      <div className="row mt-5 g-4 justify-content-center team-cards-scroll">
+        {/* Card 1 */}
+        <div className="col-md-3 col-sm-6">
+          <div className="team-card">
+            <img src={imgKarthik} alt="Karthik Raj" className="team-img" />
+            <div className="team-info">
+              <h5>Mr. S. Karthik Raj</h5>
+              <p>Managing Partner</p>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="team-linkedin"
+              >
+                <i className="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Card 2 */}
+        <div className="col-md-3 col-sm-6">
+          <div className="team-card">
+            <img src={imgPrakash} alt="Mr. Prakash Srinivasan" className="team-img" />
+            <div className="team-info">
+              <h5>Mr. Prakash Srinivasan</h5>
+              <p>Head – Manufacturing & Quality</p>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="team-linkedin"
+              >
+                <i className="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Card 3 */}
+        <div className="col-md-3 col-sm-6">
+          <div className="team-card">
+            <img src={imgAnitha} alt="Anitha Shree" className="team-img" />
+            <div className="team-info">
+              <h5>Ms. Anitha Shree</h5>
+              <p>Head – Sales & Customer Relations</p>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="team-linkedin"
+              >
+                <i className="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Card 4 */}
+        <div className="col-md-3 col-sm-6">
+          <div className="team-card">
+            <img src={imgRamesh} alt="Ramesh" className="team-img" />
+            <div className="team-info">
+              <h5>Mr. V. Ramesh</h5>
+              <p>Head – Finance & Admin</p>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="team-linkedin"
+              >
+                <i className="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 
-
-          <div className="row mt-5 g-4 justify-content-center">
-            {/* Card 1 */}
-            <div className="col-md-3 col-sm-6">
-              <div className="team-card">
-                <img src={imgKarthik} alt="Karthik Raj" className="team-img" />
-                
-                <div className="team-info">
-                  <h5>Mr. S. Karthik Raj</h5>
-                  <p>Managing Partner</p>
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="team-linkedin"
-                  >
-                    <i className="bi bi-linkedin"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="col-md-3 col-sm-6">
-              <div className="team-card">
-                <img src={imgPrakash} alt="Mr. Prakash Srinivasan" className="team-img" />
-                <div className="team-info">
-                  <h5>Mr. Prakash Srinivasan</h5>
-                  <p>Head – Manufacturing & Quality</p>
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="team-linkedin"
-                  >
-                    <i className="bi bi-linkedin"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="col-md-3 col-sm-6">
-              <div className="team-card">
-                
-                <img src={imgAnitha} alt="Anitha Shree" className="team-img" />
-                <div className="team-info">
-                  <h5>Ms. Anitha Shree</h5>
-                  <p>Head – Sales & Customer Relations</p>
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="team-linkedin"
-                  >
-                    <i className="bi bi-linkedin"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="col-md-3 col-sm-6">
-              <div className="team-card">
-                
-                <img src={imgRamesh} alt="Ramesh" className="team-img" />
-                <div className="team-info">
-                  <h5>Mr. V. Ramesh</h5>
-                  <p>Head – Finance & Admin</p>
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="team-linkedin"
-                  >
-                    <i className="bi bi-linkedin"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-            {/* ========= Our History Section ========= */}
+      {/* ========= Our History Section ========= */}
       <div className="history-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8">
-              <p className="small-title">Our History</p>
-              <h2 className="history-heading">
-                Our Journey <br />
-                <span>Through the Years</span>
-              </h2>
-            </div>
-            <div className="col-lg-4 text-lg-end">
-              <p className="history-side-text">
-                From a Modest Beginning to a Trusted <br /> Copper Brand
-              </p>
-            </div>
+      <div className="container">
+        <div className="row">
+          {/* Heading */}
+          <div className="col-lg-8">
+            <p className="small-title">Our History</p>
+            <h2 className="history-heading">
+              Our Journey <br />
+              <span>Through the Years</span>
+            </h2>
           </div>
 
-          {/* Timeline Years */}
-          <div className="timeline-years mt-4 mb-5">
-            <span className="year active">1990</span>
-            <span className="year">1999</span>
-            <span className="year">2002</span>
-            <span className="year">2012</span>
-            <span className="year">2018</span>
-            <span className="year">2024</span>
+          {/* Side text */}
+          <div className="col-lg-4 text-lg-end">
+            <p className="history-side-text">
+              From a Modest Beginning to a Trusted <br /> Copper Brand
+            </p>
+          </div>
+        </div>
+
+        {/* Timeline Years */}
+        <div className="timeline-years mt-4 mb-5">
+          <span className="year active">1990</span>
+          <span className="year">1999</span>
+          <span className="year">2002</span>
+          <span className="year">2012</span>
+          <span className="year">2018</span>
+          <span className="year">2024</span>
+        </div>
+
+        {/* Content */}
+        <div className="row align-items-center mt-4">
+          {/* Text Section */}
+          <div className="col-md-6 order-md-1">
+            <h4 className="history-subtitle">Beginning</h4>
+            <p className="history-text">
+              Established in 1990, Sonali Wires LLP started with a simple goal —
+              to deliver safe and dependable copper wiring solutions for India's
+              growing infrastructure needs. Through continuous innovation,
+              strict quality control, and customer-first values, we transformed
+              from a small manufacturing unit into a nationwide leader in copper
+              wire and cable production.
+            </p>
+            <p className="history-text">
+              Today, our legacy stands on decades of trust, performance, and
+              progress — powering homes, industries, and communities across the
+              country.
+            </p>
           </div>
 
-          <div className="row align-items-center mt-4">
-            <div className="col-md-6">
-              <h4 className="history-subtitle">Beginning</h4>
-              <p className="history-text">
-                Established in 1990, Sonali Wires LLP started with a simple goal —
-                to deliver safe and dependable copper wiring solutions for India's
-                growing infrastructure needs. Through continuous innovation, strict
-                quality control, and customer-first values, we transformed from a
-                small manufacturing unit into a nationwide leader in copper wire
-                and cable production.
-              </p>
-              <p className="history-text">
-                Today, our legacy stands on decades of trust, performance, and
-                progress — powering homes, industries, and communities across the
-                country.
-              </p>
-            </div>
-
-            <div className="col-md-6 text-center mt-4 mt-md-0">
-              <img src={historyImg} alt="Sonali Wires Legacy" className="history-img" />
-            </div>
+          {/* Image Section */}
+          <div className="col-md-6 order-md-2 text-center mt-4 mt-md-0">
+            <img
+              src={historyImg}
+              alt="Sonali Wires Legacy"
+              className="history-img img-fluid"
+            />
           </div>
         </div>
       </div>
+    </div>
 
-            {/* ========= Core Values Section ========= */}
+      {/* ========= Core Values Section ========= */}
       <div className="core-values-section">
         <div className="container">
           <div className="row align-items-start">
@@ -335,61 +372,100 @@ const About = () => {
           </div>
 
           {/* Values Grid */}
-          <div className="row g-3 mt-4">
-            <div className="col-md-2 col-sm-6">
-              <div className="value-card">
-                <i className="value-icon">
-                  <FaShieldAlt className="value-icon" />
-                </i>
-                <h5>Safety</h5>
-                <p>Every wire designed to protect lives and property.</p>
-              </div>
+          <div className="values-grid mt-4">
+            <div className="value-card">
+              <FaShieldAlt className="value-icon" />
+              <h5>Safety</h5>
+              <p>Every wire designed to protect lives and property.</p>
             </div>
 
-            <div className="col-md-2 col-sm-6">
-              <div className="value-card">
-                <i className="value-icon">
-                  <FaCogs className="value-icon" />
-                </i>
-                <h5>Durability</h5>
-                <p>Long-lasting performance, even in challenging environments.</p>
-              </div>
+            <div className="value-card">
+              <FaCogs className="value-icon" />
+              <h5>Durability</h5>
+              <p>Long-lasting performance, even in challenging environments.</p>
             </div>
 
-            <div className="col-md-2 col-sm-6">
-              <div className="value-card">
-                <i className="value-icon">
-                  <FaLightbulb className="value-icon" />
-                </i>
-                <h5>Innovation</h5>
-                <p>Modern solutions for evolving needs.</p>
-              </div>
+            <div className="value-card">
+              <FaLightbulb className="value-icon" />
+              <h5>Innovation</h5>
+              <p>Modern solutions for evolving needs.</p>
             </div>
 
-            <div className="col-md-2 col-sm-6">
-              <div className="value-card">
-                <i className="value-icon">
-                  <FaLeaf className="value-icon" />
-                </i>
-                <h5>Sustainability</h5>
-                <p>Eco-friendly products and responsible practices.</p>
-              </div>
+            <div className="value-card">
+              <FaLeaf className="value-icon" />
+              <h5>Sustainability</h5>
+              <p>Eco-friendly products and responsible practices.</p>
             </div>
 
-            <div className="col-md-2 col-sm-6">
-              <div className="value-card">
-                <i className="value-icon">
-                  <FaHeart className="value-icon" />
-                </i>
-                <h5>Integrity</h5>
-                <p>Honesty and trust at the core of our relationships.</p>
-              </div>
+            <div className="value-card">
+              <FaHeart className="value-icon" />
+              <h5>Integrity</h5>
+              <p>Honesty and trust at the core of our relationships.</p>
             </div>
           </div>
         </div>
       </div>
 
+      {/* ========= Manufacturing Excellence Section ========= */}
+      <div className="manufacture-section">
+        <div className="container">
+          <p className="small-title text-muted">Manufacturing Excellence</p>
+          <h2 className="manufacture-heading">
+            Advanced <br />
+            <span>Technology & Assurance</span>
+          </h2>
+          <p className="manufacture-subtext">
+            We blend cutting-edge technology with strict quality standards to
+            ensure every wire meets global benchmarks.
+          </p>
 
+          <div className="row align-items-center mt-0">
+            <div className="col-lg-6">
+              <ul className="manufacture-list">
+                <li>
+                  <span className="arrow">›</span> State-of-the-art production
+                  units with automated machinery.
+                </li>
+                <li>
+                  <span className="arrow">›</span> In-house NABL-accredited
+                  testing labs for precision and compliance.
+                </li>
+                <li>
+                  <span className="arrow">›</span> Certified under BIS, ISI &
+                  ISO standards, guaranteeing reliability and safety.
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-lg-6 text-center">
+              <img src={manufactureImg} alt="Manufacturing" className="manufacture-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Trusted Across India */}
+      <div className="trusted-card mt-5">
+        <div className="col-md-8">
+          <p className="trusted-subtitle">Nationwide Trust</p>
+          <h3 className="trusted-heading">
+            Trusted <br />
+            <span>Across India</span>
+          </h3>
+          <p className="trusted-text">
+            From residential contractors to industrial plants and farmers,
+            Sonali Wires LLP is powering every sector with reliable copper
+            solutions.
+          </p>
+        </div>
+
+        <div className="col-md-4 text-center mt-0">
+
+          <div className="map-placeholder">
+            <img src={mapImg} alt="India Map" className="map-img" />
+          </div>
+        </div>
+      </div>
 
     </>
   );

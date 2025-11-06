@@ -1,7 +1,7 @@
 /* ===== About Page Styling ===== */
 
 .about-container {
-  background: linear-gradient(90deg, #102a49 0%, #1a3b68 100%);
+  background: radial-gradient(76.4% 242.22% at 90.84% 24.54%, #003157 0%, #466080 100%);
   color: #ffffff;
   min-height: 80vh;
   padding: 40px 0;
@@ -32,7 +32,7 @@
   margin-bottom: 20px;
 }
 
-.about-heading span {
+.span-h1{
   font-size: 80px;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 700;
@@ -83,7 +83,7 @@
     font-size: 50px;
   }
 
-  .about-heading span {
+  .span-h1 {
     font-size: 50px;
   }
 
@@ -102,90 +102,262 @@
 }
 
 .small-title {
-  font-size: 0.9rem;
+  font-size: 20px;
   font-weight: 500;
-  color: #a1a1a1;
+  color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .mission-text {
-  font-size: 1.8rem;
+  font-size: 48px;
   font-weight: 600;
-  color: #102a49;
   line-height: 1.4;
   max-width: 700px;
+  color: rgba(22, 44, 71, 0.3);
+  line-height: 45px;
+  letter-spacing: 0%;
+}
+
+.mission-text-span {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.4;
+  max-width: 700px;
+  color: rgba(0, 49, 87, 1);
+  line-height: 45px;
+  letter-spacing: 0%;
 }
 
 .highlight-number {
-  font-size: 3rem;
+  font-size: 96px;
   font-weight: 700;
-  color: #0e255a;
+  color: rgba(38, 106, 190, 1);
   margin-bottom: 0;
+  line-height: 100%;
 }
 
 .highlight-caption {
-  color: #6c757d;
-  font-size: 0.95rem;
+  color: rgba(0, 49, 87, 1);
+  font-size: 20px;
   margin-top: 4px;
+  line-height: 100%;
 }
 
 .exp-box {
-  background: #0e255a;
+  background: linear-gradient(132.08deg, #003057 24.83%, rgba(0, 48, 87, 0.6) 115.74%);
   color: #fff;
   border-radius: 12px;
   padding: 40px 25px;
-  max-width: 260px;
+  max-width: 331px;
   margin-left: auto;
+  text-align: left;
 }
 
-.exp-number {
-  font-size: 2.2rem;
+.exp-icon {
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  top: 1013px;
+  left: 998px;
+}
+
+.exp-icon svg {
+  font-size: 28px;
+  color: #fff;
+}
+
+/* .exp-number {
+  font-size: 96px;
   font-weight: 700;
   margin-bottom: 5px;
+  color: linear-gradient(276.27deg, #FFFFFF 19.15%, rgba(255, 255, 255, 0.3) 91.75%);
+} */
+
+.exp-number {
+  font-size: 96px;
+  font-weight: 600;
+  background: linear-gradient(276.27deg, #FFFFFF 70%, rgba(255, 255, 255, 0.3) 91.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  /* ✅ Soft "noise" depth effect */
+  text-shadow:
+    0px 2px 6px rgba(22, 44, 71, 0.1),
+    0px 1px 3px rgba(22, 44, 71, 0.1);
 }
 
 .exp-caption {
-  font-size: 0.95rem;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1;
+  color: #ffffff;
+;
 }
 
-/* Company Profile */
+.exp-caption span {
+  font-weight: 400;
+  background: linear-gradient(276.27deg, #FFFFFF 24.15%, rgba(255, 255, 255, 0.3) 91.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  /* ✅ Soft "noise" depth effect */
+  text-shadow:
+    0px 2px 6px rgba(22, 44, 71, 0.1),
+    0px 1px 3px rgba(22, 44, 71, 0.1);
+}
+/* =========================
+   Company Profile Section
+========================= */
+
 .profile-heading {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #0e255a;
-  line-height: 1.3;
+  font-size: 48px;
+  font-weight: 540;
+  color: rgba(0, 49, 87, 1);
+  line-height: 70px;
 }
 
 .profile-heading span {
-  color: #2b5bb3;
-  font-weight: 700;
+  /* ✅ Gradient text color */
+  background: linear-gradient(96.27deg, #003157 8.25%, rgba(0, 49, 87, 0.5) 80.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  /* ✅ Soft shadow effect for subtle depth */
+  text-shadow: 0px 2px 6px rgba(22, 44, 71, 0.1);
+
+  font-weight: 750;
+  font-size: 70px;
+  line-height: 76px;
 }
 
 .profile-desc {
   font-size: 1rem;
   color: #444;
   line-height: 1.7;
+  margin-top: 55px;
   margin-bottom: 14px;
 }
 
-/* Responsive */
+/* =========================
+   Circular Team Icon
+========================= */
+
+.team-circle {
+  position: relative;
+  width: 175px;
+  height: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.circle-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-360deg);
+}
+
+/* center circle */
+.center-circle {
+  width: 90px;
+  height: 90px;
+  background-color: #e8ebf2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* arrow */
+.arrow {
+  font-size: 32px;
+  color: #11224d;
+  line-height: 1;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+/* Tablet (medium screens) */
 @media (max-width: 991px) {
-  .exp-box {
-    margin: 20px 0 0;
+  .profile-heading {
+    font-size: 38px;
+    line-height: 55px;
+  }
+
+  .profile-heading span {
+    font-size: 52px;
+    line-height: 60px;
+  }
+
+  .profile-desc {
+    margin-top: 35px;
+  }
+
+  .team-circle {
+    width: 130px;
+    height: 130px;
+    margin-top: 60px;
+  }
+
+  .center-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .arrow {
+    font-size: 28px;
   }
 }
 
+/* Mobile (small screens) */
+@media (max-width: 767px) {
+  /* Center text on mobile */
+  .col-lg-6.mb-4,
+  .col-lg-6.mb-lg-0 {
+    text-align: center;
+  }
+
+  .profile-heading {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .profile-heading span {
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  .profile-desc {
+    margin-top: 25px;
+  }
+
+  /* ✅ Hide the circular “Meet Our Team” icon on mobile */
+  .team-circle {
+    display: none !important;
+  }
+}
 
 /* ===== Leadership Section ===== */
 
 .leadership-section {
-  background: linear-gradient(95deg, #0e255a 0%, #16356d 100%);
+  background: radial-gradient(77.69% 246.65% at 90.84% 24.54%, #003157 0%, #2E4562 100%);
   color: #ffffff;
   border-radius: 20px;
-  margin: 80px auto;
+  margin: 40px auto;
   padding: 60px 0;
   max-width: 1100px;
 }
@@ -200,11 +372,12 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #ffffff;
-}
-
-.leader-quote-title span {
-  color: #b0c7ff;
+  /* ✅ Gradient font color */
+  background: linear-gradient(96.27deg, #FFFFFF 8.25%, rgba(255, 255, 255, 0.5) 80.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .leader-quote-text {
@@ -217,32 +390,40 @@
 
 .leader-name-block {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  flex-direction: column; /* ✅ Stack vertically */
+  align-items: flex-start; /* ✅ Align text left */
+  gap: 4px; /* small natural spacing */
+  margin-top: 10px;
 }
 
 .leader-name {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin: 0;
+  /* ✅ Gradient text */
+  background: linear-gradient(96.27deg, #FFFFFF 8.25%, rgba(255, 255, 255, 0.5) 80.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .leader-title {
   margin: 0;
-  color: #bfc7e0;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .leader-title span {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
 }
 
 .linkedin-icon {
   font-size: 1.4rem;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 1);
   text-decoration: none;
-  margin-left: 8px;
+  margin-left: 50px;
 }
 
 .linkedin-icon:hover {
@@ -281,13 +462,13 @@
   background: #ffffff;
   color: #1a1a1a;
   padding: 80px 0;
-  text-align: left; /* ✅ Changed to left */
+  text-align: left;
 }
 
 .team-heading {
   font-size: 2rem;
   font-weight: 600;
-  color: #0e255a;
+  color: rgba(0, 49, 87, 1);
   line-height: 1.3;
   text-align: left;
   margin-bottom: 10px;
@@ -295,9 +476,11 @@
 
 .team-heading span {
   display: inline-block;
-  font-size: 2.8rem;         /* ✅ make second line bigger */
+  font-size: 2.8rem;
   font-weight: 700;
-  color: #2b5bb3;
+  background: linear-gradient(96.27deg, #003157 8.25%, rgba(0, 49, 87, 0.5) 80.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   line-height: 1.2;
   margin-top: 4px;
 }
@@ -343,13 +526,13 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  text-align: left; /* ✅ left-aligned inside cards */
+  text-align: left;
 }
 
 .team-info h5 {
   font-weight: 600;
   font-size: 1rem;
-  color: #0e255a;
+  color: rgba(15, 34, 31, 1);
   margin-bottom: 4px;
 }
 
@@ -371,8 +554,6 @@
 }
 
 /* --- Responsive --- */
-
-/* For screen width 992px and below */
 @media (max-width: 992px) {
   .team-img {
     height: 280px;
@@ -387,7 +568,6 @@
   }
 }
 
-/* For screen width 768px and below */
 @media (max-width: 768px) {
   .team-heading {
     font-size: 1.6rem;
@@ -402,7 +582,6 @@
   }
 }
 
-/* For screen width 576px and below */
 @media (max-width: 576px) {
   .team-heading {
     font-size: 1.5rem;
@@ -413,13 +592,78 @@
   }
 }
 
-/* ===== Our History Section ===== */
+/* ===== Animation specifically for .team-cards-wrapper .row ===== */
+@media (max-width: 768px) {
+  /* Smooth horizontal scroll container for cards */
+  .team-cards-wrapper .row.team-cards-scroll {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    gap: 16px;
+    /* add some horizontal padding so the first card isn't clipped */
+    padding: 12px 16px 20px;
+    /* disable auto-scroll animation on mobile so users can access every card */
+    animation: none;
+    /* ensure cards start from the left edge (Bootstrap's justify-content-center can center them and hide the start) */
+    justify-content: flex-start !important;
+    margin-left: 0 !important; /* override .row negative gutter */
+    padding-left: 8px !important;
+  }
+
+  /* Each card behaves like a horizontal slide with a fixed width so
+     the first cards are not hidden on small screens. */
+  .team-cards-wrapper .team-card {
+    /* keep cards fairly narrow on mobile so more are visible and none are clipped */
+    flex: 0 0 220px;
+    min-width: 200px !important;
+    max-width: 260px !important;
+    scroll-snap-align: start;
+  }
+
+  /* Make the Bootstrap column wrappers behave like intrinsic-width items inside the horizontal scroller
+     so they don't force percentage widths that can push the first cards off-screen. */
+  .team-cards-wrapper .row.team-cards-scroll > [class*="col-"] {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+
+  /* Reduce image height on small screens so cards fit better vertically */
+  .team-img {
+    height: 350px;
+  }
+}
+
+/* Auto-scroll animation */
+@keyframes scrollCards {
+  0% {
+    transform: translateX(-10);
+  }
+  100% {
+    transform: translateX(30%);
+  }
+}
+
+/* =========================
+   Our History Section
+========================= */
 
 .history-section {
-  background: linear-gradient(100deg, #0e255a 0%, #16356d 100%);
+  background: rgba(0, 49, 87, 1);
   color: #ffffff;
   padding: 100px 0;
   border-radius: 0;
+}
+
+.small-title {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 10px;
 }
 
 .history-heading {
@@ -440,6 +684,7 @@
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.5;
   margin-top: 40px;
+  text-align: right;
 }
 
 .timeline-years {
@@ -507,12 +752,21 @@
 }
 
 .history-img {
+  width: 100%;
+  height: auto;
   max-width: 100%;
   border-radius: 10px;
+  object-fit: cover;
 }
 
-/* Responsive */
+/* =========================
+   Responsive Adjustments
+========================= */
 @media (max-width: 992px) {
+  .history-section {
+    padding: 80px 0;
+  }
+
   .history-heading span {
     font-size: 2.2rem;
   }
@@ -521,9 +775,59 @@
     gap: 25px;
     font-size: 1.5rem;
   }
+
+  .history-side-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-section {
+    padding: 60px 0;
+  }
+
+  .history-heading {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .history-heading span {
+    font-size: 2.2rem;
+  }
+
+  .timeline-years {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.3rem;
+  }
+
+  .history-side-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .history-img {
+    margin-top: 25px;
+    max-width: 90%;
+  }
+
+  .history-subtitle {
+    text-align: center;
+  }
+
+  .history-text {
+    text-align: center;
+  }
 }
 
 @media (max-width: 576px) {
+  .timeline-years {
+    font-size: 1.1rem;
+    gap: 15px;
+  }
+
   .history-heading {
     font-size: 1.6rem;
   }
@@ -531,16 +835,10 @@
   .history-heading span {
     font-size: 1.8rem;
   }
-
-  .timeline-years {
-    gap: 15px;
-    font-size: 1.1rem;
-  }
 }
 
 
 /* ===== Core Values Section ===== */
-
 .core-values-section {
   background: #f7f9fc;
   color: #0e255a;
@@ -550,15 +848,18 @@
 .values-heading {
   font-size: 2rem;
   font-weight: 600;
-  color: #0e255a;
+  color: rgba(0, 49, 87, 1);
+;
   line-height: 1.3;
 }
 
 .values-heading span {
-  color: #2b5bb3;
+  /* ✅ Gradient text color */
+  background: linear-gradient(96.27deg, #003157 8.25%, rgba(0, 49, 87, 0.5) 80.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 70px;
   font-weight: 700;
-  
 }
 
 .values-subtext {
@@ -568,60 +869,74 @@
   margin-top: 30px;
 }
 
-/* Values grid cards */
+/* ===== Grid Layout ===== */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* ✅ 5 equal columns */
+  gap: 24px; /* equal spacing between cards */
+  margin-top: 40px;
+}
+
+/* ===== Value Card Styling ===== */
 .value-card {
   background: #fff;
   border: 1px solid rgba(14, 37, 90, 0.1);
   border-radius: 10px;
-  padding: 24px 18px;
+  padding: 28px 20px;
   text-align: left;
-  height: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
 }
 
 .value-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
+/* Icons */
 .value-icon {
-  font-size: 2rem;
-  color: #0e255a;
-  margin-bottom: 12px;
-  display: inline-block;
+  font-size: 2.4rem;
+  color: rgba(0, 49, 87, 1);
+  margin-bottom: 14px;
 }
 
+/* Text */
 .value-card h5 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  color: rgba(0, 49, 87, 1);
 }
 
 .value-card p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #555;
-  margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .values-heading span {
-    font-size: 2rem;
+/* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
   }
 
   .value-card {
     text-align: center;
   }
-
-  .value-icon {
-    margin-bottom: 10px;
-  }
 }
 
 @media (max-width: 576px) {
-  .values-heading {
-    font-size: 1.6rem;
+  .values-grid {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
   }
 
   .values-heading span {
@@ -629,3 +944,274 @@
   }
 }
 
+
+/* ===== Manufacturing Excellence Section ===== */
+
+.manufacture-section {
+  background: #ffffff;
+  color: #0e255a;
+  padding: 100px 0;
+}
+
+.manufacture-heading {
+  font-size: 48px;
+  font-weight: 570;
+  line-height: 1.3;
+  color: rgba(0, 49, 87, 1);
+;
+}
+
+.manufacture-heading span {
+  font-size: 70px;
+  font-weight: 600;
+
+  /* ✅ Gradient text color */
+  background: linear-gradient(96.27deg, #003157 8.25%, rgba(0, 49, 87, 0.5) 80.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.manufacture-subtext {
+  font-size: 1rem;
+  color: #6b6b6b;
+  max-width: 700px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* List style */
+.manufacture-list {
+  list-style: none;
+  padding-left: 0;
+  color: #1a1a1a;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.manufacture-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.manufacture-list .arrow {
+  position: absolute;
+  left: 0;
+  color: #e53935;
+  font-weight: bold;
+}
+
+.manufacture-img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 992px) {
+  .manufacture-section {
+    padding: 60px 30px;
+  }
+
+  .manufacture-heading {
+    font-size: 38px;
+  }
+
+  .manufacture-heading span {
+    font-size: 52px;
+  }
+
+  .manufacture-subtext {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .manufacture-list {
+    font-size: 0.95rem;
+  }
+
+  .manufacture-img {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .manufacture-section {
+    padding: 50px 20px;
+  }
+
+  .manufacture-heading {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .manufacture-heading span {
+    display: block;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .manufacture-subtext {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .manufacture-list {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .manufacture-list li {
+    padding-left: 16px;
+  }
+
+  .manufacture-img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 30px auto 0;
+  }
+}
+
+/* ===== Trusted Across India Card Layout ===== */
+.trusted-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(77.69% 246.65% at 90.84% 24.54%, #003157 0%, #2E4562 100%);
+  border-radius: 70px;
+  color: #ffffff;
+  overflow: hidden;
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 440px;
+  position: relative;
+}
+
+/* ===== Left Section (Text) ===== */
+.trusted-card .col-md-8 {
+  flex: 0 0 50%; /* ✅ occupies left half */
+  position: relative;
+  padding-left: 76px;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+.trusted-subtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+
+.trusted-heading {
+  font-size: 48px;
+  font-weight: 415;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.trusted-heading span {
+  color: #b0c7ff;
+  font-size: 70px;
+  font-weight: 420;
+}
+
+.trusted-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 20px;
+  font-weight: 410;
+  line-height: 130%;
+  max-width: 420px;
+}
+
+/* ===== Right Section (Map) ===== */
+.trusted-card .col-md-4 {
+  flex: 0 0 50%; /* ✅ occupies right half */
+  height: 100%;
+  display: flex;
+  justify-content: flex-end; /* ✅ aligns map to right */
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ===== Map Styling ===== */
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ✅ fills entire right half */
+  opacity: 80%;
+
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 992px) {
+  .trusted-card {
+    flex-direction: column;
+    border-radius: 40px;
+    height: auto;
+    padding: 30px 25px;
+  }
+
+  .trusted-card .col-md-8,
+  .trusted-card .col-md-4 {
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .map-placeholder {
+    height: 300px;
+  }
+
+  .map-img {
+    transform: none;
+  }
+
+  .trusted-heading {
+    font-size: 2rem;
+  }
+
+  .trusted-heading span {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .trusted-card {
+    padding: 30px 20px;
+    border-radius: 30px;
+  }
+
+  .trusted-heading {
+    font-size: 1.6rem;
+  }
+
+  .trusted-heading span {
+    font-size: 1.9rem;
+  }
+
+  .trusted-text {
+    font-size: 1rem;
+  }
+
+  .map-placeholder {
+    height: auto;
+  }
+
+  .map-img {
+    width: 100%;
+    height: auto;
+    transform: none;
+  }
+}
