@@ -42,3 +42,405 @@
     margin-left: 0.5rem;
   }
 }
+
+/* =============================
+   Certifications & Trust Section
+============================= */
+.certifications-section {
+  text-align: center;
+  padding: 70px 70px;
+  border-radius: 0;
+  color: #162C47;
+  background-color: #f9f9f9; /* Optional: Add a background color for contrast */
+}
+
+.cert-subtitle {
+  font-size: 1.1rem;
+  color: gray;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-align: center; /* Ensure center alignment */
+}
+
+.certifications-section h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center; /* Center heading text */
+}
+
+.certifications-section h2 span {
+  background: linear-gradient(276.27deg, #162C47 19.15%, rgba(22, 44, 71, 0.5) 91.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4.5rem;
+  font-weight: 800;
+  display: inline-block; /* Ensure it behaves well in text flow */
+}
+
+.cert-desc {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+  color: #333;
+  text-align: center; /* Center paragraph text */
+}
+
+/* Logo row */
+.cert-logos {
+  display: flex;
+  justify-content: center; /* Center logos horizontally */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px; /* Optional: add vertical spacing */
+}
+
+.cert-logos img {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1) contrast(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Layout for left and right content */
+.cert-content {
+  display: flex;
+  justify-content: center; /* Center the content container */
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 0 20px; /* Reduced padding for mobile */
+}
+
+.cert-left, .cert-right {
+  flex: 1 1 300px; /* Flex grow, shrink, basis for responsiveness */
+  max-width: 500px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.cert-left {
+  text-align: left;
+}
+
+.cert-right {
+  text-align: right;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: 40px 25px;
+  }
+
+  .cert-subtitle {
+    font-size: 1rem;
+    text-align: left;
+  }
+  .cert-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cert-left,
+  .cert-right {
+    flex: unset;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .certifications-section h2 {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  .cert-desc {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  /* Adjust logo size and gap for mobile screens */
+  .cert-logos {
+    gap: 25px;
+  }
+
+  .cert-logos img {
+    height: 70px;
+  }
+}
+
+/* =============================
+   Footer Section
+============================= */
+.footer {
+  background: radial-gradient(44.84% 100.45% at 23.89% 20.25%, #003157 0%, #001339 100%) !important;
+  color: #fff;
+  padding: 80px 70px 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+.foot-subtitle {
+  background: linear-gradient(276.27deg, #ffffff 19.15%, rgba(255, 255, 255, 0.3) 91.75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 1px 6px rgba(22, 44, 71, 0.1);
+  filter: contrast(105%);
+}
+
+/* Social icons */
+.icon a {
+  text-decoration: none !important;
+}
+
+.icon i {
+  color: #fff;
+  background: rgba(242, 107, 107, 1);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+
+/* Contact list layout */
+.footer-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* Contact icons */
+.footer-contact-list li i {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgba(242, 107, 107, 1);
+  color: #fff;
+  font-size: 13px;
+}
+
+/* Text and links */
+.footer-contact-list li a,
+.footer-contact-list li span {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.footer-contact-list li a:hover {
+  color: rgba(242, 107, 107, 1);
+  text-decoration: underline;
+}
+
+.privacy-link{
+   text-decoration: none;
+   color: rgba(255, 255, 255, 1);
+}
+/* =======================
+   Logo Wrapper
+======================= */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: auto;
+}
+
+/* =======================
+   Logo Image
+======================= */
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-container-nav {
+  position: relative;
+  display: inline-block;
+}
+
+.sonali-logo {
+  width: 67.5px;
+  height: 67.22px;
+  object-fit: contain;
+  display: block;
+  filter: brightness(1.05) contrast(1.1);
+}
+
+.sonali-logo-nav {
+  width: 59.4px;
+  height: 59.16px;
+  object-fit: contain;
+  display: block;
+  filter: brightness(1.05) contrast(1.1);
+}
+
+/* Tiny R inside the circle */
+.logo-r {
+  position: absolute;
+  top: -2px;
+  right: 16px;
+  font-size: xx-small !important;
+  color: #fff;
+  font-weight: 100;
+  font-family: "Poppins", sans-serif;
+}
+.logo-r-nav {
+  position: absolute;
+  top: -2px;
+  right: -3px;
+  font-size: xx-small !important;
+  color: #fff;
+  font-weight: 100;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =======================
+   Logo Text Styles
+======================= */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1;
+  margin-top: 4px;
+  position: relative;
+}
+
+.logo-text-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1;
+  margin-top: 4px;
+  position: relative;
+}
+
+.logo-text span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 0.6;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.logo-text-nav span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 0.6;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* SONALI main text */
+.brand-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 1px;
+  line-height: normal;
+  margin: 0;
+  margin-top: 10px;
+  position: relative;
+}
+
+.brand-title-nav {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: normal;
+  margin: 0;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* Subheading */
+.brand-subtitle {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-size: 8px;
+  margin-top: 3px;
+  letter-spacing: 0.4px;
+  opacity: 0.75;
+}
+
+.brand-subtitle-nav {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-size: 5.5px !important;
+  margin-top: 3px;
+  letter-spacing: 0.4px;
+  opacity: 0.75;
+}
+
+/* =======================
+   Responsive Adjustments
+======================= */
+@media (max-width: 768px) {
+  .sonali-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .brand-title {
+    font-size: 20px;
+  }
+
+  .brand-subtitle {
+    font-size: 7px;
+  }
+
+  .logo-r {
+    top: -4px;
+    right: 14px;
+    font-size: xx-small !important;
+  }
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .footer {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-lg {
+    padding: 8px 16px !important;
+    font-size: 13px !important;
+  }
+
+  .d-flex.gap-3 {
+    gap: 10px !important;
+  }
+
+  .footer-contact-list li {
+    gap: 8px;
+  }
+
+  .footer-contact-list li i {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+}
