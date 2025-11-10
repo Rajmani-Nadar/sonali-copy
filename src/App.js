@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, NavLink, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, NavLink} from "react-router-dom";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -24,56 +24,32 @@ import sonaliLogo from "./images/Layer1.png";
 
 
 function AppContent() {
-  const location = useLocation();
-  const [navbarColor, setNavbarColor] = useState("#007bff"); // default fallback color
-
   const [showSearch, setShowSearch] = useState(false);
-
-  // Effect to update navbar bg color on route change
-  useEffect(() => {
-    // Delay to ensure divs render
-    const timeoutId = setTimeout(() => {
-      // Query first div with expected page container classes
-      const firstDiv = document.querySelector(
-        ".home-container, .about-container, .products-container, .innovation-container, .careers-container, .media-container, .contact-container"
-      );
-
-      if (firstDiv) {
-        const bgColor = window.getComputedStyle(firstDiv).background;
-        setNavbarColor(bgColor);
-      } else {
-        setNavbarColor("#007bff"); // fallback color if no div found
-      }
-    }, 50);
-
-    return () => clearTimeout(timeoutId);
-  }, [location]);
 
   return (
     <>
       <nav
-        className="navbar navbar-expand-lg navbar-dark py-3"
-        style={{ background: navbarColor, transition: "background-color 0.3s ease" }}
+        className="navbar navbar-expand-lg bg-primary navbar-dark py-3"
       >
         <div className="container">
           <NavLink to="/" className="navbar-brand d-flex align-items-center gap-2">
-           {/* Logo Image with small R inside */}
-  <div className="logo-container-nav position-relative me-2">
-    <img
-      src={sonaliLogo}
-      alt="Sonali Wires Logo"
-      className="sonali-logo-nav"
-    />
-  </div>
+            {/* Logo Image with small R inside */}
+            <div className="logo-container-nav position-relative me-2">
+              <img
+                src={sonaliLogo}
+                alt="Sonali Wires Logo"
+                className="sonali-logo-nav"
+              />
+            </div>
 
-  {/* Logo Text */}
-  <div className="logo-text-nav position-relative">
-    <h3 className="brand-title-nav">
-      SONALI<span className="logo-r-nav">®</span>
-    </h3>
-    <span>W I R E S</span>
-    <p className="brand-subtitle-nav">(A UNIT OF SONALI GROUP)</p>
-  </div>
+            {/* Logo Text */}
+            <div className="logo-text-nav position-relative">
+              <h3 className="brand-title-nav">
+                SONALI<span className="logo-r-nav">®</span>
+              </h3>
+              <span>W I R E S</span>
+              <p className="brand-subtitle-nav">(A UNIT OF SONALI GROUP)</p>
+            </div>
           </NavLink>
 
           <button
@@ -198,12 +174,8 @@ function AppContent() {
           <img src={iso45001} alt="ISO 45001" />
           <img src={pureCopper} alt="Pure Copper" />
         </div>
-      </div>
-
-      {/* ===== Footer Section ===== */}
-      <footer className="text-light py-5 footer">
         {/* Top section */}
-        <div className="container mb-5">
+        <div className="container mt-4 mb-2">
           <div className="row align-items-center">
             <div className="col-lg-6">
               <h2 className="display-4 mb-4">
@@ -225,31 +197,34 @@ function AppContent() {
             </div>
           </div>
         </div>
+      </div>
 
+      {/* ===== Footer Section ===== */}
+      <footer className="text-light py-3 footer">
         {/* Middle section */}
         <div className="container py-4">
           <div className="row g-4">
             {/* Logo + Description */}
             <div className="col-lg-4 mb-4">
               <div className="col-lg-4 mb-4 d-flex align-items-center logo-wrapper position-relative">
-  {/* Logo Image with small R inside */}
-  <div className="logo-container position-relative me-2">
-    <img
-      src={sonaliLogo}
-      alt="Sonali Wires Logo"
-      className="sonali-logo"
-    />
-  </div>
+                {/* Logo Image with small R inside */}
+                <div className="logo-container position-relative me-2">
+                  <img
+                    src={sonaliLogo}
+                    alt="Sonali Wires Logo"
+                    className="sonali-logo"
+                  />
+                </div>
 
-  {/* Logo Text */}
-  <div className="logo-text position-relative">
-    <h3 className="brand-title">
-      SONALI<span className="logo-r">®</span>
-    </h3>
-    <span>W I R E S</span>
-    <p className="brand-subtitle">(A UNIT OF SONALI GROUP)</p>
-  </div>
-</div>
+                {/* Logo Text */}
+                <div className="logo-text position-relative">
+                  <h3 className="brand-title">
+                    SONALI<span className="logo-r">®</span>
+                  </h3>
+                  <span>W I R E S</span>
+                  <p className="brand-subtitle">(A UNIT OF SONALI GROUP)</p>
+                </div>
+              </div>
               <p className="mb-4">
                 Safe, reliable, and innovative copper wiring solutions powering homes,
                 industries & agriculture.
@@ -335,23 +310,6 @@ function AppContent() {
             </div>
           </div>
         </div>
-
-        {/* Bottom Section */}
-        <div className="container-fluid footer-bottom mt-0 py-3">
-          <div className="container">
-            <div className="row align-items-center">
-              {/* Left side */}
-              <div className="col-md-6 text-md-start text-center">
-                Copyright &copy; 2024  All rights reserved.
-              </div>
-
-              {/* Right side */}
-              <div className="col-md-6 text-md-end text-center privacy">
-                <a href="#privacy" className="text-light privacy-link">Privacy Policy</a>
-              </div>
-            </div>
-          </div>
-        </div>
       </footer>
 
     </>
@@ -367,142 +325,3 @@ function App() {
 }
 
 export default App;
-
-// import React, { useState } from "react";
-// import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
-// import Home from "./pages/Home";
-// import About from "./pages/About";
-// import Products from "./pages/Products";
-// import Innovation from "./pages/Innovation";
-// import Careers from "./pages/Careers";
-// import Media from "./pages/Media";
-// import Contact from "./pages/Contact";
-// import "./App.css";
-// import logo from "./images/sonali_logo.png";
-
-// import rohs from "./images/rohs.png";
-// import reach from "./images/reach-compliant.webp";
-// import pbFree from "./images/pb-lead free.webp";
-// import isi from "./images/isi.avif";
-// import iso9001 from "./images/iso-9001.jpg";
-// import iso14001 from "./images/iso-14001.avif";
-// import iso45001 from "./images/iso-45001.webp";
-// import pureCopper from "./images/pure-copper.png";
-// // import sonali_logo from "./images/sonali_logo.png";
-// import sonaliLogo from "./images/Layer1.png";
-
-// function App() {
-//   const [showSearch, setShowSearch] = useState(false);
-
-//   return (
-//     <Router>
-//       <nav className="navbar navbar-expand-lg bg-primary navbar-dark py-3">
-//         <div className="container">
-//           <NavLink to="/" className="navbar-brand d-flex align-items-center gap-2">
-//             <img src={logo} alt="Sonali Wires Logo" height="50" />
-//           </NavLink>
-
-//           <button
-//             className="navbar-toggler"
-//             type="button"
-//             data-bs-toggle="collapse"
-//             data-bs-target="#navbarContent"
-//             aria-controls="navbarContent"
-//             aria-expanded="false"
-//             aria-label="Toggle navigation"
-//           >
-//             <span className="navbar-toggler-icon"></span>
-//           </button>
-
-//           <div className="collapse navbar-collapse" id="navbarContent">
-//             <ul className="navbar-nav ms-auto align-items-center gap-3">
-//               <li className="nav-item">
-//                 <NavLink to="/" end className={({ isActive }) =>
-//                   `nav-link ${isActive ? 'active text-light' : ''}`
-//                 }>
-//                   Home
-//                 </NavLink>
-//               </li>
-//               <li className="nav-item">
-//                 <NavLink to="/about" className={({ isActive }) =>
-//                   `nav-link ${isActive ? 'active text-light' : ''}`
-//                 }>
-//                   About Us
-//                 </NavLink>
-//               </li>
-//               <li className="nav-item">
-//                 <NavLink to="/products" className={({ isActive }) =>
-//                   `nav-link ${isActive ? 'active text-light' : ''}`
-//                 }>
-//                   Our Products
-//                 </NavLink>
-//               </li>
-
-//               <li className="nav-item">
-//                 <NavLink to="/media" className={({ isActive }) =>
-//                   `nav-link ${isActive ? 'active text-light' : ''}`
-//                 }>
-//                   Resources
-//                 </NavLink>
-//               </li>
-
-//               <li className="nav-item">
-//                 <NavLink to="/careers" className={({ isActive }) =>
-//                   `nav-link ${isActive ? 'active text-light' : ''}`
-//                 }>
-//                   Careers
-//                 </NavLink>
-//               </li>
-
-//               {/* Search */}
-//               <li className="nav-item position-relative">
-//                 {showSearch ? (
-//                   <input
-//                     type="text"
-//                     className="form-control form-control-sm"
-//                     placeholder="Search..."
-//                     autoFocus
-//                     onBlur={() => setShowSearch(false)}
-//                   />
-//                 ) : (
-//                   <button
-//                     className="btn btn-link nav-link"
-//                     onClick={() => setShowSearch(true)}
-//                   >
-//                     <i className="fas fa-search"></i>
-//                   </button>
-//                 )}
-//               </li>
-
-//               {/* Contact Us Button */}
-//               <li className="nav-item">
-//                 <NavLink to="/contact" className="nav-link">
-//                   <button className="btn btn-danger rounded-pill px-4">
-//                     Contact Us
-//                   </button>
-//                 </NavLink>
-//               </li>
-//             </ul>
-//           </div>
-//         </div>
-//       </nav>
-
-//       <div className="content">
-//         <Routes>
-//           <Route path="/" element={<Home />} />
-//           <Route path="/about" element={<About />} />
-//           <Route path="/products" element={<Products />} />
-//           <Route path="/innovation" element={<Innovation />} />
-//           <Route path="/careers" element={<Careers />} />
-//           <Route path="/media" element={<Media />} />
-//           <Route path="/contact" element={<Contact />} />
-//         </Routes>
-//       </div>
-
-      
-
-//     </Router>
-//   );
-// }
-
-// export default App;

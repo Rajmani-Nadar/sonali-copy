@@ -13,10 +13,10 @@ const OurProducts = () => {
         <div className="container">
           <p className="breadcrumb">Home &gt; Our Products</p>
           <h1 className="hero-heading">
-            Smarter <span>Wires,</span>
-            <br />
-            Safer Tomorrow
+            Smarter
           </h1>
+          <span className="hero-heading-span">Wires, <br /></span>
+          <p className="hero-heading p">Safer Tomorrow</p>
           <p className="hero-text">
             Discover our safe, durable, and BIS-certified copper wires and
             cables — engineered to power homes, industries, and agriculture with
@@ -47,7 +47,7 @@ const OurProducts = () => {
           <div className="row g-4 mt-3">
             {/* Card 1 */}
             <div className="col-md-3 col-sm-6">
-              <div className="product-card card-bg1">
+              <div className="products-card card-bg1">
                 <img src={wire2} alt="Three Core Flat Cables" />
                 <h5>Three Core Flat Cables</h5>
                 <p>
@@ -59,7 +59,7 @@ const OurProducts = () => {
 
             {/* Card 2 */}
             <div className="col-md-3 col-sm-6">
-              <div className="product-card card-bg2">
+              <div className="products-card card-bg2">
                 <img src={wire3} alt="Housing Wires" />
                 <h5>Housing Wires</h5>
                 <p>
@@ -71,7 +71,7 @@ const OurProducts = () => {
 
             {/* Card 3 */}
             <div className="col-md-3 col-sm-6">
-              <div className="product-card card-bg3">
+              <div className="products-card card-bg3">
                 <img src={wire4} alt="Submersible Winding Wires" />
                 <h5>Submersible Winding Wires</h5>
                 <p>
@@ -83,7 +83,7 @@ const OurProducts = () => {
 
             {/* Card 4 */}
             <div className="col-md-3 col-sm-6">
-              <div className="product-card card-bg4">
+              <div className="products-card card-bg4">
                 <img src={wire5} alt="Industrial Cables" />
                 <h5>Industrial Cables</h5>
                 <p>

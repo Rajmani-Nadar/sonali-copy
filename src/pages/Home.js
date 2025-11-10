@@ -168,7 +168,7 @@ const Home = () => {
 
           <div className="product-card rotate-right">
             <img src={redBlueYellow} alt="Wiring Wires (FR, FRLS, HFFR)" className="third-image" />
-            <h3>Submersible Winding Wires</h3>
+            <h3 style={{marginTop: '50px'}}>Submersible Winding Wires</h3>
           </div>
         </div>
         <div style={{ textAlign: 'center', marginTop: '40px' }}>

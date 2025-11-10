@@ -1,9 +1,38 @@
-/* Custom styles that Bootstrap doesn't provide */
+/* navbar bg color should be match the other pages background color */
+.products-hero,
+.home-container,
+.about-container {
+  margin-top: -30px; /* adjust if your navbar height differs */
+  padding-top: 150px; /* ensure content isn’t hidden behind navbar */
+}
 
 /* Override Bootstrap's default primary color to match the brand */
 .bg-primary {
-  background-color: #05345A !important;
+  background-color: transparent !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }
+
+/* When the navbar is expanded (mobile menu open), make it solid */
+.navbar-collapse.show,
+.navbar-toggler[aria-expanded="true"] + .navbar-collapse {
+  background-color: #05345A !important; /* your brand color */
+}
+
+/* Optional: for smoother UX, give the toggle icon area a solid bg too */
+.navbar-toggler {
+  border: none;
+}
+
+
+
+
+
+
+
 
 /* Custom hover effect for nav links */
 .navbar .nav-link {
@@ -178,7 +207,7 @@
 .footer {
   background: radial-gradient(44.84% 100.45% at 23.89% 20.25%, #003157 0%, #001339 100%) !important;
   color: #fff;
-  padding: 80px 70px 40px;
+  padding: 0 !important;
   font-family: "Poppins", sans-serif;
 }
 
@@ -244,10 +273,6 @@
   text-decoration: underline;
 }
 
-.privacy-link{
-   text-decoration: none;
-   color: rgba(255, 255, 255, 1);
-}
 /* =======================
    Logo Wrapper
 ======================= */
