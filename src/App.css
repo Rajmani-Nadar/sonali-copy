@@ -2,8 +2,26 @@
 .products-hero,
 .home-container,
 .about-container {
-  margin-top: -30px; /* adjust if your navbar height differs */
+  margin-top: -10px; /* adjust if your navbar height differs */
   padding-top: 150px; /* ensure content isn’t hidden behind navbar */
+}
+@media (max-width: 768px) {
+  .products-hero,
+  .home-container,
+  .about-container {
+    margin-top: 0px !important;           /* remove the overlap */
+    padding-top: 140px !important;       /* smaller top spacing for mobile navbar */
+  }
+}
+
+/* ===== Small Mobiles (≤576px) ===== */
+@media (max-width: 576px) {
+  .products-hero,
+  .home-container,
+  .about-container {
+    margin-top: 0;
+    padding-top: 120px !important;       /* further reduce padding for tight mobile screens */
+  }
 }
 
 /* Override Bootstrap's default primary color to match the brand */
@@ -34,53 +52,319 @@
 
 
 
-/* Custom hover effect for nav links */
+
+/* =======================================
+   🌐 NAVBAR GLOBAL STYLING
+======================================= */
+
+/* Navbar background & layout */
+.navbar {
+  background-color: transparent !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 1rem 0;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Optional: add subtle shadow when scrolling */
+.navbar.scrolled {
+  background: rgba(22, 44, 71, 0.95) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== FIX: Dropdown Arrow Exact Alignment ===== */
+.navbar .dropdown-toggle::after {
+  display: inline-block;
+  vertical-align: middle;  /* keeps caret aligned with text baseline */
+  margin-left: 80px;
+  border-top: 0.35em solid; 
+  border-right: 0.35em solid transparent;
+  border-left: 0.35em solid transparent;
+  border-bottom: 0;
+  position: relative;
+  top: 0; /* ✅ ensure it doesn't shift up */
+  transform: translateY(20px); /* subtle nudge for visual centering */
+}
+
+/* =======================================
+   🧭 NAVBAR BRAND
+======================================= */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-brand img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-brand h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.navbar-brand p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* =======================================
+   🔠 NAV LINKS
+======================================= */
 .navbar .nav-link {
   font-weight: 500;
-  transition: color 0.3s ease;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
 }
 
 .navbar .nav-link:hover {
-  color: white !important;
+  color: #ffffff !important;
 }
 
-/* Search transition effect */
+.navbar .nav-link.active {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.navbar .nav-item {
+  margin-left: 0.5rem;
+}
+
+/* Underline hover effect */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  /* background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.3)); */
+  transition: width 0.3s ease;
+}
+
+/* =======================================
+   🔍 SEARCH BAR
+======================================= */
 .form-control-sm {
   width: 140px;
-  transition: width 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  transition: width 0.3s ease, background 0.3s ease;
 }
 
 .form-control-sm:focus {
   width: 200px;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  box-shadow: none;
+  color: #fff;
 }
 
-/* Custom styles for navbar brand */
-.navbar-brand img {
-  width: auto;
-  height: 60px;
+/* Search icon button */
+.navbar .btn-link {
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.3s ease;
 }
 
-.navbar-brand p {
-  font-size: 18px;
-  line-height: 1.1;
+.navbar .btn-link:hover {
+  color: #fff;
 }
 
-/* Custom spacing for navbar items on larger screens */
-@media (min-width: 992px) {
+/* =======================================
+   🩵 CONTACT BUTTON
+======================================= */
+.navbar .btn-danger {
+  background: linear-gradient(135deg, #f25b5b, #e74c3c);
+  border: none;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar .btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(242, 91, 91, 0.4);
+}
+
+/* =======================================
+   ⬇️ DROPDOWN MENU
+======================================= */
+.navbar .dropdown-menu {
+  background-color: rgba(22, 44, 71, 0.95);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.25s ease;
+}
+
+.navbar .dropdown-item {
+  color: #fff !important;
+  font-weight: 400;
+  padding: 10px 20px;
+  transition: background 0.3s ease;
+}
+
+.navbar .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Light Navbar on Resources Page */
+.navbar-light.bg-white {
+  background-color: #ffffff !important;
+  transition: background-color 0.4s ease;
+}
+
+.navbar-light.bg-white .nav-link {
+  color: rgba(0, 49, 87, 0.8) !important;
+}
+
+.navbar-light.bg-white .nav-link.active,
+.navbar-light.bg-white .nav-resources-active,
+.navbar-light.bg-white .nav-link:hover {
+  color: rgba(0, 49, 87, 1) !important;
+  font-weight: 600;
+}
+
+.navbar-light.bg-white .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.navbar-light.bg-white .dropdown-menu {
+  background-color: rgba(0, 49, 87, 0.9);
+}
+
+/* Smooth fade-in for dropdown */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =======================================
+   📱 RESPONSIVE NAVBAR (MOBILE)
+======================================= */
+@media (max-width: 992px) {
+  .navbar {
+    background: rgba(22, 44, 71, 0.95) !important;
+    position: relative;
+  }
+
+  .navbar-collapse {
+    background: rgba(22, 44, 71, 0.95);
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 10px;
+  }
+
   .navbar .nav-item {
-    margin-left: 0.5rem;
+    margin: 8px 0;
+  }
+
+  .navbar .nav-link {
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .navbar .dropdown-menu {
+    background: transparent !important;
+    box-shadow: none;
+    border: none;
+    padding-left: 10px;
+  }
+
+  .navbar .dropdown-item {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 15px;
+    padding: 8px 15px;
+    border-radius: 6px;
+  }
+
+  .navbar .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Show dropdown inline on mobile */
+  .navbar-nav .dropdown-menu.show {
+    position: static;
+    float: none;
   }
 }
+
+/* =======================================
+   🧭 NAVBAR TOGGLER (MOBILE ICON)
+======================================= */
+.navbar-toggler {
+  border: none;
+  color: #fff;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* =======================================
+   🎨 LOGO COLOR SWITCH ON RESOURCES PAGE
+======================================= */
+.logo-text-nav.dark-logo h3,
+.logo-text-nav.dark-logo span,
+.logo-text-nav.dark-logo p {
+  color: rgba(0, 49, 87, 1) !important;
+}
+
+.logo-text-nav.dark-logo .logo-r-nav {
+  color: rgba(0, 49, 87, 0.8) !important;
+}
+
+/* Smooth color transition */
+.logo-text-nav h3,
+.logo-text-nav span,
+.logo-text-nav p {
+  transition: color 0.4s ease;
+}
+
+/* Make logo darker on Resources page */
+.dark-logo-img {
+  filter: brightness(0.2) contrast(1.2);
+  transition: filter 0.4s ease;
+}
+
+/* Normal logo transition */
+.sonali-logo-nav {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  transition: filter 0.4s ease;
+}
+
 
 /* =============================
    Certifications & Trust Section
 ============================= */
 .certifications-section {
-  text-align: center;
-  padding: 70px 70px;
+  text-align: left;
+  padding: 20px 20px !important ;
   border-radius: 0;
   color: #162C47;
-  background-color: #f9f9f9; /* Optional: Add a background color for contrast */
+  background: linear-gradient(102.86deg, rgba(0, 49, 87, 0.03) 5.74%, rgba(0, 49, 87, 0.1) 133.83%);
+ /* Optional: Add a background color for contrast */
 }
 
 .cert-subtitle {
@@ -88,14 +372,14 @@
   color: gray;
   margin-bottom: 10px;
   letter-spacing: 1px;
-  text-align: center; /* Ensure center alignment */
+  text-align: left; /* Ensure center alignment */
 }
 
 .certifications-section h2 {
   font-size: 2.8rem;
   font-weight: 600;
   margin-bottom: 20px;
-  text-align: center; /* Center heading text */
+  text-align: left; /* Center heading text */
 }
 
 .certifications-section h2 span {
@@ -113,7 +397,7 @@
   margin: 0 auto 60px;
   line-height: 1.6;
   color: #333;
-  text-align: center; /* Center paragraph text */
+  text-align: left; /* Center paragraph text */
 }
 
 /* Logo row */
@@ -123,11 +407,11 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
-  margin-top: 30px; /* Optional: add vertical spacing */
+  margin-top: 40px; /* Optional: add vertical spacing */
 }
 
 .cert-logos img {
-  height: 90px;
+  height: 108.16px;
   width: auto;
   object-fit: contain;
   filter: brightness(1) contrast(1);
@@ -146,8 +430,8 @@
 
 .cert-left, .cert-right {
   flex: 1 1 300px; /* Flex grow, shrink, basis for responsiveness */
-  max-width: 500px;
-  padding: 10px;
+  max-width: 558px;
+  /* padding: 10px; */
   box-sizing: border-box;
 }
 
@@ -159,45 +443,202 @@
   text-align: right;
 }
 
-/* Responsive styles for smaller screens */
-@media (max-width: 768px) {
+.power-your {
+  padding: 70px 70px;;
+}
+
+.isi {
+  width: 108px !important;
+  height: 108px !important;
+}
+
+/* =============================
+   📱 Responsive — Certifications & Trust
+============================= */
+
+/* ===== Tablets (≤992px) ===== */
+@media (max-width: 992px) {
   .certifications-section {
-    padding: 40px 25px;
+    padding: 60px 40px !important;
   }
 
-  .cert-subtitle {
-    font-size: 1rem;
-    text-align: left;
-  }
   .cert-content {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+    gap: 1px;
   }
 
   .cert-left,
   .cert-right {
-    flex: unset;
     max-width: 100%;
-    text-align: center;
+    text-align: left;
+  }
+
+  .certifications-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .certifications-section h2 span {
+    font-size: 3.5rem;
+  }
+
+  .cert-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 50px !important;
+    max-width: 100%;
+  }
+
+  .cert-logos {
+    gap: 30px;
+  }
+
+  .cert-logos img {
+    height: 90px;
+  }
+
+  .power-your {
+    padding: 50px 40px;
+  }
+
+  .power-your h2 {
+    font-size: 2rem;
+  }
+
+  .power-your .lead {
+    font-size: 1rem;
+  }
+}
+
+/* ===== Mobile (≤768px) ===== */
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: 20px 20px !important;
+  }
+
+  .cert-content {
+    flex-direction: initial;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .cert-left,
+  .cert-right {
+    text-align: left;
+  }
+
+  .certifications-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .certifications-section h2 span {
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+
+  .cert-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  .cert-logos {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 0px;
+  }
+
+  .cert-logos img {
+    height: 60px;
+  }
+
+  .isi {
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  .power-your {
+    text-align: left;
+    padding: 40px 20px;
+  }
+
+  .power-your h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .power-your span.foot-subtitle {
+    font-size: 2.2rem;
+  }
+
+  .power-your .lead {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .power-your .btn-lg {
+    font-size: 14px;
+    padding: 8px 18px;
+    width: 150px !important;
+  }
+
+  .power-your .d-flex {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* ===== Small Mobiles (≤576px) ===== */
+@media (max-width: 576px) {
+  .certifications-section {
+    padding: 40px 15px !important;
   }
 
   .certifications-section h2 {
     font-size: 1.6rem;
-    text-align: left;
+  }
+
+  .certifications-section h2 span {
+    font-size: 2.2rem;
   }
 
   .cert-desc {
     font-size: 0.9rem;
-    text-align: left;
   }
 
-  /* Adjust logo size and gap for mobile screens */
   .cert-logos {
-    gap: 25px;
+    justify-content: center;
+    gap: 15px;
   }
 
   .cert-logos img {
-    height: 70px;
+    height: 50px;
+  }
+
+  .power-your {
+    padding: 30px 15px;
+  }
+
+  .power-your h2 {
+    font-size: 1.6rem;
+  }
+
+  .power-your span.foot-subtitle {
+    font-size: 2rem;
+  }
+
+  .power-your .lead {
+    font-size: 0.9rem;
+  }
+
+  .power-your .btn-lg {
+    font-size: 13px;
+  }
+
+  .power-your .d-flex {
+    flex-direction: column;
+    gap: 12px;
   }
 }
 
@@ -310,6 +751,7 @@
   object-fit: contain;
   display: block;
   filter: brightness(1.05) contrast(1.1);
+  margin-left: 40px;
 }
 
 /* Tiny R inside the circle */
@@ -325,8 +767,8 @@
 .logo-r-nav {
   position: absolute;
   top: -2px;
-  right: -3px;
-  font-size: xx-small !important;
+  right: 4px;
+  font-size: 7px !important;
   color: #fff;
   font-weight: 100;
   font-family: "Poppins", sans-serif;
@@ -365,9 +807,11 @@
 
 .logo-text-nav span {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: 550;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 16px;
+  margin-left: 14px !important;
+  transform: scaleX(1.3);
   line-height: 0.6;
   letter-spacing: 0.5px;
   margin: 0;
@@ -389,11 +833,13 @@
 .brand-title-nav {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
+  transform: scaleX(1.5);
   color: #ffffff;
-  font-size: 20px;
-  letter-spacing: 1px;
+  font-size: 18px;
+  letter-spacing: -1px;
   line-height: normal;
   margin: 0;
+  margin-left: 20px;
   margin-top: 10px;
   position: relative;
 }
@@ -411,8 +857,9 @@
 .brand-subtitle-nav {
   font-family: "Poppins", sans-serif;
   color: #ffffff;
-  font-size: 5.5px !important;
+  font-size: 6px !important;
   margin-top: 3px;
+  margin-left: 4px;
   letter-spacing: 0.4px;
   opacity: 0.75;
 }

@@ -31,13 +31,13 @@ const About = () => {
         <div className="about-content container">
           <div className="row align-items-start">
             {/* Left section */}
-            <div className="col-lg-6">
+            <div className="col-lg-8">
               <p className="breadcrumb">Home &gt; About Us</p>
               <h2 className="about-title">About</h2>
-              <span className="span-h1">Sonali </span>
-              <h1 className="about-heading">
-                Wires LLP
-              </h1>
+              
+              <p className="about-heading">
+               <span className="span-h1">Sonali </span> Wires LLP
+              </p>
 
               <h3 className="vision-title">Our Vision</h3>
               <p className="vision-text">
@@ -47,7 +47,7 @@ const About = () => {
             </div>
 
             {/* Right section */}
-            <div className="col-lg-6 about-right">
+            <div className="col-lg-4 about-our-right">
               <h5 className="trusted-title">
                 India’s Trusted Copper Wire Manufacturer — <br />
                 BIS & ISO Certified for Quality and Safety
