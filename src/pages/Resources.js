@@ -147,7 +147,7 @@ const Resources = () => {
                 Sonali Wires LLP showcased its latest product innovations and
                 manufacturing excellence at the India Electrical Expo 2025.
               </p>
-              <a href="#" className="update-link">
+              <a href="https://www.electricexpo.co.in/" className="update-link">
                 Read More →
               </a>
             </div>
@@ -170,7 +170,7 @@ const Resources = () => {
                 Retardant (HFFR) housing wires. Designed for modern households,
                 these wires emit minimal smoke and zero halogen.
               </p>
-              <a href="#" className="update-link">
+              <a href="https://www.electricexpo.co.in/" className="update-link">
                 Read More →
               </a>
             </div>

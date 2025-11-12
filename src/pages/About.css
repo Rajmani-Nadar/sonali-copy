@@ -1360,6 +1360,7 @@
   margin: 0 auto;
   height: 440px;
   position: relative;
+  margin-bottom: 100px !important;
 }
 
 /* ===== Left Section (Text) ===== */
