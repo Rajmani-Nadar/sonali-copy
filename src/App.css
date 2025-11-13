@@ -888,6 +888,19 @@
   opacity: 0.75;
 }
 
+.footer-contact-list .contatctus,
+.footer-contact-list .mailto {
+  color: rgba(242, 107, 107, 1); /* red text */
+  text-decoration: underline;   /* underline */
+  font-weight: 500;
+}
+
+/* Optional: darker red on hover */
+.contatctus:hover,
+.mailto:hover {
+  color: #d94a4a;
+}
+
 /* =======================
    Responsive Adjustments
 ======================= */

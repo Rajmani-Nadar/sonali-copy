@@ -36,7 +36,7 @@ const Resources = () => {
       {/* ===== HERO SECTION ===== */}
       <div className="resources-hero">
         <div className="container resource-content">
-          <p className="breadcrumb3">Home &gt; Media & Resources</p>
+          <p className="breadcrumb3">Home &gt; <span>Media & Resources</span></p>
 
           <div className="resource-text-area">
             <h1 className="resources-heading">

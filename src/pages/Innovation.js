@@ -95,14 +95,33 @@ const Innovation = () => {
         </div>
 
         {/* Right Circular Explore Button */}
-        <div className="approach-right">
-          <div className="explore-circle">
-            <div className="circle-text">
-              <span>Explore Our Products</span>
-            </div>
-            <div className="circle-arrow">↗</div>
-          </div>
-        </div>
+        <div className="team-circle-inno">
+                <svg viewBox="0 0 200 200" className="circle-svg-inno">
+                  <defs>
+                    <path
+                      id="circlePath"
+                      d="M100,100
+               m-80,0
+               a80,80 0 1,1 160,0
+               a80,80 0 1,1 -160,0"
+                    />
+                  </defs>
+                  <text
+                    fontSize="28"
+                    fill="#11224d"
+                    fontWeight="500"
+                    letterSpacing="2px"
+                  >
+                    <textPath href="#circlePath" startOffset="0%">
+                      • Meet Our Team • Meet Our Team
+                    </textPath>
+                  </text>
+                </svg>
+
+                <div className="center-circle-inno">
+                  <span className="arrow-inno">↓</span>
+                </div>
+              </div>
       </div>
     </div>
 
@@ -129,7 +148,7 @@ const Innovation = () => {
       <div className="qa-right">
         <p className="qa-subtitle">Quality Assurance</p>
         <h2 className="qa-heading">
-          Tested for <span>Trust</span>
+          Tested for <br/> <span>Trust</span>
         </h2>
         <p className="qa-description">
           Every product undergoes rigorous testing in NABL-accredited labs and
@@ -141,17 +160,14 @@ const Innovation = () => {
         <div className="qa-icons">
           <div className="qa-icon-item">
             <img src={bisIcon} alt="BIS" className="qa-icon" />
-            <p>BIS</p>
           </div>
 
           <div className="qa-icon-item">
             <img src={isiIcon} alt="ISI" className="qa-icon" />
-            <p>ISI</p>
           </div>
 
           <div className="qa-icon-item">
             <img src={isoIcon} alt="ISO" className="qa-icon" />
-            <p>ISO</p>
           </div>
         </div>
       </div>

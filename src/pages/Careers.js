@@ -15,6 +15,8 @@ import environment from "../images/environment.png";
 import rewards from "../images/rewards.png";
 import innovate from "../images/innovate.png";
 
+import star from "../images/star.png";
+
 const Careers = () => {
   const jobOpenings = [
     {
@@ -99,7 +101,7 @@ const Careers = () => {
             <div className="why-left">
               <p className="why-subtitle">Life at Sonali Wires</p>
               <h2 className="why-heading">
-                Why <span>Work With Us?</span>
+                Why <br/> <span>Work With Us?</span>
               </h2>
               <p className="why-desc">
                 We build careers, opportunities, and futures. Our workplace is
@@ -111,6 +113,7 @@ const Careers = () => {
 
             <div className="why-right">
               <div className="retention-box">
+                <img src={star} alt="Star Shines at Night" className="star" />
                 <h3>95%</h3>
                 <p>
                   Employee Retention in <br />

@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import "./Contact.css";
 import contactHero from "../images/contact.jpg"; // background hero image
 import mapImg from "../images/map.png";
-import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
+
+import location_icon from "../images/location_icon.png";
+import contact_icon from "../images/contact_icon.png";
+import mail_icon from "../images/mail_icon.png";
 
 const Contact = () => {
   const [activeTab, setActiveTab] = useState("general");
@@ -40,8 +43,9 @@ const Contact = () => {
       {/* ===========================
           ENQUIRY FORM SECTION
       =========================== */}
-      <section className="contact-form-section">
-        <div className="container position-relative">
+      <section className="contact-form-section  position-relative">
+        <div className="lets-talk">Let’s Talk</div>
+        <div className="container">
           {/* Tabs */}
           <div className="enquiry-tabs mb-4">
             <button
@@ -75,9 +79,8 @@ const Contact = () => {
           <div className="form-container">
             {/* General Enquiry Form */}
             <form
-              className={`enquiry-form fade-form ${
-                activeTab === "general" ? "show" : "hide"
-              }`}
+              className={`enquiry-form fade-form ${activeTab === "general" ? "show" : "hide"
+                }`}
             >
               <div className="row">
                 <div className="col-md-6">
@@ -137,9 +140,8 @@ const Contact = () => {
 
             {/* Dealer Enquiry Form */}
             <form
-              className={`enquiry-form fade-form ${
-                activeTab === "dealer" ? "show" : "hide"
-              }`}
+              className={`enquiry-form fade-form ${activeTab === "dealer" ? "show" : "hide"
+                }`}
             >
               <div className="row">
                 <div className="col-md-6">
@@ -208,9 +210,6 @@ const Contact = () => {
               </div>
             </form>
           </div>
-
-          {/* Vertical Side Text */}
-          <div className="lets-talk">Let’s Talk</div>
         </div>
       </section>
 
@@ -237,21 +236,23 @@ const Contact = () => {
             <div className="map-right">
               <ul className="map-details">
                 <li>
-                  <FiMapPin className="map-icon" />
+                  <img src={location_icon} className="map-png-icon" alt="Location" />
                   <span>
                     G-6/30, Jain Plaza, Oppanakara Street,
                     <br />
                     Coimbatore, Tamil Nadu - 641001
                   </span>
                 </li>
+
                 <li>
-                  <FiPhone className="map-icon" />
+                  <img src={contact_icon} className="map-png-icon" alt="Phone" />
                   <a href="tel:+918344422211" className="map-link">
                     +91 83444 22211
                   </a>
                 </li>
+
                 <li>
-                  <FiMail className="map-icon" />
+                  <img src={mail_icon} className="map-png-icon" alt="Email" />
                   <a href="mailto:info@sonaligroup.com" className="map-link">
                     info@sonaligroup.com
                   </a>
@@ -259,14 +260,15 @@ const Contact = () => {
               </ul>
 
               <p className="map-desc">
-                Looking to collaborate on large-scale distribution, industrial
-                supply, or government projects? Feel free to use the above email
-                address. We will get back to you as soon as we can!
+                Looking to collaborate on large-scale distribution, industrial supply,
+                or government projects? Feel free to use the above email address.
+                We will get back to you as soon as we can!
               </p>
             </div>
           </div>
         </div>
       </section>
+
     </>
   );
 };

@@ -22,6 +22,7 @@ import iso45001 from "./images/iso-45001.png";
 import pureCopper from "./images/pure-copper.png";
 import sonaliLogo from "./images/Layer1.png";
 
+import ScrollToTop from "../src/components/ScrollToTop";
 
 function AppContent() {
   const [showSearch, setShowSearch] = useState(false);
@@ -31,24 +32,21 @@ function AppContent() {
   return (
     <>
       <nav
-        className={`navbar navbar-expand-lg py-3 ${
-          isResources ? "navbar-light bg-resources" : "bg-primary navbar-dark"
-        }`}
+        className={`navbar navbar-expand-lg py-3 ${isResources ? "navbar-light bg-resources" : "bg-primary navbar-dark"
+          }`}
       >
         <div className="container">
           <NavLink
             to="/"
-            className={`navbar-brand d-flex align-items-center gap-2 ${
-              isResources ? "dark-logo" : ""
-            }`}
+            className={`navbar-brand d-flex align-items-center gap-2 ${isResources ? "dark-logo" : ""
+              }`}
           >
             <div className="logo-container-nav position-relative me-2">
               <img
                 src={sonaliLogo}
                 alt="Sonali Wires Logo"
-                className={`sonali-logo-nav ${
-                  isResources ? "dark-logo-img" : ""
-                }`}
+                className={`sonali-logo-nav ${isResources ? "dark-logo-img" : ""
+                  }`}
               />
             </div>
 
@@ -58,9 +56,8 @@ function AppContent() {
               </h3>
               <span>W I R E S</span>
               <p
-                className={`brand-subtitle-nav ${
-                  isResources ? "text-resources" : ""
-                }`}
+                className={`brand-subtitle-nav ${isResources ? "text-resources" : ""
+                  }`}
               >
                 (A UNIT OF SONALI GROUP)
               </p>
@@ -148,21 +145,24 @@ function AppContent() {
                 </NavLink>
               </li>
 
-              <li className="nav-item position-relative">
-                {showSearch ? (
-                  <input
-                    type="text"
-                    className="form-control form-control-sm"
-                    placeholder="Search..."
-                    autoFocus
-                    onBlur={() => setShowSearch(false)}
-                  />
-                ) : (
-                  <button className="btn btn-link nav-link" onClick={() => setShowSearch(true)}>
-                    <i className="fas fa-search"></i>
-                  </button>
-                )}
-              </li>
+              {location.pathname === "/" && (
+  <li className="nav-item position-relative">
+    {showSearch ? (
+      <input
+        type="text"
+        className="form-control form-control-sm"
+        placeholder="Search..."
+        autoFocus
+        onBlur={() => setShowSearch(false)}
+      />
+    ) : (
+      <button className="btn btn-link nav-link" onClick={() => setShowSearch(true)}>
+        <i className="fas fa-search"></i>
+      </button>
+    )}
+  </li>
+)}
+
 
               <li className="nav-item">
                 <NavLink to="/contact" className="nav-link">
@@ -289,23 +289,47 @@ function AppContent() {
             </div>
 
             {/* Quick Links */}
-            <div className="col-lg-2 col-md-6">
+            <div className="col-lg-2 col-md-6 quick-links">
               <h4 className="h5 mb-3">Quick Links</h4>
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <a href="#home" className="nav-link text-light px-0">Home</a>
+                  <NavLink
+                    to="/"
+                    className="nav-link text-light px-0"
+                  >
+                    Home
+                  </NavLink>
                 </li>
+
                 <li className="nav-item">
-                  <a href="#about" className="nav-link text-light px-0">About Us</a>
+                  <NavLink
+                    to="/about"
+                    className="nav-link text-light px-0"
+                  >
+                    About Us
+                  </NavLink>
                 </li>
+
                 <li className="nav-item">
-                  <a href="#resources" className="nav-link text-light px-0">Resources</a>
+                  <NavLink
+                    to="/resources"
+                    className="nav-link text-light px-0"
+                  >
+                    Resources
+                  </NavLink>
                 </li>
+
                 <li className="nav-item">
-                  <a href="#careers" className="nav-link text-light px-0">Careers</a>
+                  <NavLink
+                    to="/careers"
+                    className="nav-link text-light px-0"
+                  >
+                    Careers
+                  </NavLink>
                 </li>
               </ul>
             </div>
+
 
             {/* Our Products */}
             <div className="col-lg-3 col-md-6">
@@ -332,11 +356,11 @@ function AppContent() {
               <ul className="list-unstyled footer-contact-list">
                 <li>
                   <i className="fas fa-phone"></i>
-                  <a href="tel:+918344422211">+91 83444 22211</a>
+                  <a href="tel:+918344422211" className="contatctus">+91 83444 22211</a>
                 </li>
                 <li>
                   <i className="fas fa-envelope"></i>
-                  <a href="mailto:info@sonaligroup.com">info@sonaligroup.com</a>
+                  <a href="mailto:info@sonaligroup.com" className="mailto">info@sonaligroup.com</a>
                 </li>
                 <li>
                   <i className="fas fa-map-marker-alt"></i>
@@ -359,6 +383,7 @@ function AppContent() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <AppContent />
     </Router>
   );
