@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink, useLocation } from "react-router-dom";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -25,30 +25,45 @@ import sonaliLogo from "./images/Layer1.png";
 
 function AppContent() {
   const [showSearch, setShowSearch] = useState(false);
+  const location = useLocation();
+  const isResources = location.pathname === "/resources";
 
   return (
     <>
       <nav
-        className="navbar navbar-expand-lg bg-primary navbar-dark py-3"
+        className={`navbar navbar-expand-lg py-3 ${
+          isResources ? "navbar-light bg-resources" : "bg-primary navbar-dark"
+        }`}
       >
         <div className="container">
-          <NavLink to="/" className="navbar-brand d-flex align-items-center gap-2">
-            {/* Logo Image with small R inside */}
+          <NavLink
+            to="/"
+            className={`navbar-brand d-flex align-items-center gap-2 ${
+              isResources ? "dark-logo" : ""
+            }`}
+          >
             <div className="logo-container-nav position-relative me-2">
               <img
                 src={sonaliLogo}
                 alt="Sonali Wires Logo"
-                className="sonali-logo-nav"
+                className={`sonali-logo-nav ${
+                  isResources ? "dark-logo-img" : ""
+                }`}
               />
             </div>
 
-            {/* Logo Text */}
             <div className="logo-text-nav position-relative">
               <h3 className="brand-title-nav">
                 SONALI<span className="logo-r-nav">®</span>
               </h3>
               <span>W I R E S</span>
-              <p className="brand-subtitle-nav">(A UNIT OF SONALI GROUP)</p>
+              <p
+                className={`brand-subtitle-nav ${
+                  isResources ? "text-resources" : ""
+                }`}
+              >
+                (A UNIT OF SONALI GROUP)
+              </p>
             </div>
           </NavLink>
 

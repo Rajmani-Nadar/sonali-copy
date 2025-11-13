@@ -354,6 +354,30 @@
   transition: filter 0.4s ease;
 }
 
+/* Background color for navbar on Resources route */
+.bg-resources {
+  background: rgba(0, 49, 87, 1) !important;
+}
+
+/* Change font colors for links and text in navbar on Resources */
+.navbar-light.bg-resources .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+}
+.navbar-light.bg-resources .nav-link.active {
+  color: rgba(0, 49, 87, 1);
+  font-weight: 600;
+}
+
+
+.brand-title-nav {
+  color: #fff !important;
+}
+
+/* Logo image filter for dark tone */
+.dark-logo-img {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(97%) saturate(749%)
+    hue-rotate(179deg) brightness(110%) contrast(85%);
+}
 
 /* =============================
    Certifications & Trust Section
@@ -835,11 +859,11 @@
   font-weight: 700;
   transform: scaleX(1.5);
   color: #ffffff;
-  font-size: 18px;
+  font-size: 18px !important;
   letter-spacing: -1px;
   line-height: normal;
   margin: 0;
-  margin-left: 20px;
+  margin-left: 20px !important;
   margin-top: 10px;
   position: relative;
 }
@@ -858,8 +882,8 @@
   font-family: "Poppins", sans-serif;
   color: #ffffff;
   font-size: 6px !important;
-  margin-top: 3px;
-  margin-left: 4px;
+  margin-top: 3px !important;
+  margin-left: 6px !important;
   letter-spacing: 0.4px;
   opacity: 0.75;
 }
