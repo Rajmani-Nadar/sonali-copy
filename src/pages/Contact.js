@@ -240,7 +240,7 @@ const Contact = () => {
                   <span>
                     G-6/30, Jain Plaza, Oppanakara Street,
                     <br />
-                    Coimbatore, Tamil Nadu - 641001
+                    <span className="address-secondary">Coimbatore, Tamil Nadu - 641001</span>
                   </span>
                 </li>
 
